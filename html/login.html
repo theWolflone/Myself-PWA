@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../styles/style-dist.css">
+      <title>Login</title>
+</head>
+<body>
+      <!-- <div class="container">
+            <div class="brand-logo"></div>
+            <div class="brand-title">Myself</div>
+            <div class="inputs">
+              <label>CORREO INSTITUCIONAL</label>
+              <input type="email" placeholder="example@test.com" />
+              <label>CONTRASEÑA</label>
+              <input type="password" placeholder="Min 6 charaters long" />
+              <button type="submit">LOGIN</button>
+              
+            </div>
+      </div> -->
+
+      <div class="form-structor">
+            <img src="../assets/images/Logo White.svg" alt="Logo" class="logo" width="200px">
+            <div class="signup">
+                  <h2 class="form-title" id="signup">Registrarse</h2>
+                  <div class="form-holder">
+                        <form action="">
+                              <input type="text" class="input" placeholder="Nombre" required/>
+                              <input type="text" class="input" placeholder="Apellidos" required/>
+                              <h2 class="h2" style="margin-left: 15px";>Sexo</h2>
+                              <div class="center-label">
+                                    <input class="input1 radio" type="radio" name="gender" value="masculino" required>
+                                    <span class="label">Masculino </span>
+                  
+                                    <input class="input1 radio" type="radio" name="gender" value="femenino" required>
+                                    <span class="label">Femenino</span>
+                              </div>
+                              <hr style="border: 1px solid #eee;
+                              ">
+                              <input type="number" class="input" placeholder="Edad" required min="12" max="19"/>
+                              <input type="text" class="input" placeholder="Sección" required maxlength="4"/>
+                              <input type="text" class="input" placeholder="Carné" />
+                              <input type="email" class="input" placeholder="Correo Institucional" />
+                              <input type="password" class="input" placeholder="Contraseña" />
+                        </div>
+                        <button class="submit-btn">Comenzar</button>
+                  </form>
+            </div>
+            <div class="login slide-up">
+                  <div class="center">
+                        <h2 class="form-title" id="login"><span>o</span>Iniciar Sesión</h2>
+                        <div class="form-holder">
+                              <form action="">
+                                    <input type="email" class="input" placeholder="Correo Institucional" />
+                                    <input type="password" class="input" placeholder="Contraseña" />
+                              </form>
+                        </div>
+                        <button class="submit-btn">Iniciar sesión</button>
+                  </div>
+            </div>
+      </div>
+
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="../js/loginstyle.js"></script>
+</html>
