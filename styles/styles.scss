@@ -1,0 +1,361 @@
+@font-face {
+      font-family: "Montserrat";
+      src: url(../assets/fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat 2";
+  src: url(../assets/fonts/static/Montserrat-Bold.ttf);
+}
+
+@font-face {
+      font-family: "Quicksand";
+      src: url(../assets/fonts/Quicksand-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Quicksand 2";
+  src: url(../assets/fonts/static/Quicksand-Medium.ttf);
+}
+
+html,body {
+	position: sticky;
+	min-height: 100vh;
+	background-color: #20997b; 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Montserrat";
+	overflow-y: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
+.h2{
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 200;
+  color: rgba(0,0,0,0.6);
+
+}
+
+.logo{
+  display: block;
+  margin: auto;
+  margin-top: 75%;
+}
+
+.form-structor {
+	background-color: #20997b;
+	border-radius: 30px;
+	height: 850px;
+	width: 390px;
+	position: relative;
+	overflow: hidden;
+	
+	&::after {
+		content: '';
+		opacity: .8;
+		position: absolute;
+		top: 0;right:0;bottom:0;left:0;
+		background-repeat: no-repeat;
+		background-position: left bottom;
+		background-size: 500px;
+	}
+	
+	.signup {
+		position: absolute;
+		top: 43%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		width: 90%;
+		z-index: 5;
+		-webkit-transition: all .3s ease;
+		
+		
+		&.slide-up {
+			top: 5%;
+			-webkit-transform: translate(-50%, 0%);
+			-webkit-transition: all .3s ease;
+		}
+		
+		&.slide-up .form-holder,
+		&.slide-up .submit-btn {
+			opacity: 0;
+			visibility: hidden;
+		}
+		
+		&.slide-up .form-title {
+			font-size: 1em;
+			cursor: pointer;
+		}
+		
+		.form-title {
+      font-family: "Quicksand 2";
+      letter-spacing: 2.2px;
+			color: #fff;
+			font-size: 13em;
+      font-weight: 100;
+      font-size: 35px ;
+			text-align: center;
+			margin-top: 35px;
+      margin-bottom: -1px;
+		}
+		
+		.form-holder {
+			border-radius: 20px;
+			background-color: rgba(255, 255, 255);
+			overflow: hidden;
+			margin-top: 20px;
+			opacity: 1;
+			visibility: visible;
+			-webkit-transition: all .3s ease;
+      		box-shadow: 1px 1px 5px #313839;
+			
+      .center-label{
+        display: table;
+        margin: 0 auto;
+
+        .label{
+          font-family: "Montserrat";
+          border: 0;
+          outline: none;
+          box-shadow: none;
+          height: 30px;
+          line-height: 30px;
+          padding: 8px 1px;
+          border-bottom: 1px solid rgba(238, 238, 238, 0.071);
+          width: 100%;
+          font-size: 15px;
+          border-bottom: 0;
+          color: rgba(0,0,0,0.6);
+          
+          .input1{
+            display: inline-block;
+            justify-items: center;
+          }
+          
+
+          
+        }
+      }
+
+			.input {
+        font-family: "Montserrat";
+				border: 0;
+				outline: none;
+				box-shadow: none;
+				display: block;
+				height: 46px;
+				line-height: 30px;
+				padding: 2px;
+        padding-bottom: 4px;
+        padding-left: 17px;
+				border-bottom: 1px solid #eee;
+				width: 100%;
+				font-size: 16px;
+				
+				&:last-child {
+					border-bottom: 0;
+				}
+				&::-webkit-input-placeholder {
+					color: rgba(0,0,0,0.6);
+				}
+			}
+		}
+		
+		.submit-btn {
+			background-color: rgba(0,0,0,0.4);
+			color: rgba(256,256,256,10);
+			border:0;
+			border-radius: 15px;
+			display: block;
+			margin: 15px auto; 
+			padding: 20px 40px;
+			width: 100%;
+			font-size: 19px;
+			font-weight: bold;
+			letter-spacing: 1.5px;
+			cursor: pointer;
+			opacity: 1;
+			visibility: visible;
+			-webkit-transition: all .3s ease;
+			
+			&:hover {
+				transition: all .3s ease;
+				background-color: rgba(0,0,0,0.8);
+			}
+		}
+	}
+	
+	.login {
+		position: absolute;
+		top: 13%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100% ;
+		background-color: #f0fff2;
+		z-index: 5;
+		-webkit-transition: all .3s ease;
+		
+		&::before {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: -30px;
+			margin: 0;
+			-webkit-transform: translate(-50%, 0);
+			background-color: #f0fff2;
+			width: 460px;
+			height: 100px;
+			border-radius: 100%;
+			z-index: 5;
+			-webkit-transition: all .3s ease;
+		}
+		
+		.center {
+			position: absolute;
+			top: calc(50% - 10%);
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			width: 80%;
+			z-index: 5;
+			-webkit-transition: all .3s ease;
+			
+			
+			.form-title {
+				color: #000;
+        			font-family: "Quicksand 2";
+        			font-weight: 900;
+        			margin-left: -6px;
+				font-size: 1.9em;
+				text-align: center;
+
+				span {
+					color: rgba(0,0,0,0.4);
+					opacity: 0;
+			    visibility: hidden;
+				  -webkit-transition: all .3s ease;
+				}
+			}
+
+			.form-holder {
+				border-radius: 15px;
+				background-color: #fff;
+				border: 1px solid #eee;
+				overflow: hidden;
+				margin-top: 50px;
+				opacity: 1;
+				visibility: visible;
+				-webkit-transition: all .3s ease;
+        			box-shadow: 1px 1px 10px rgb(49, 56, 57, .2);
+				
+
+
+				.input {
+          				font-family: "Montserrat";
+					border: 0;
+					outline: none;
+					box-shadow: none;
+					display: block;
+					height: 50px;
+					line-height: 30px;
+					padding: 8px 15px;
+					border-bottom: 1px solid #eee;
+					width: 100%;
+					font-size: 15px;
+
+					&:last-child {
+						border-bottom: 0;
+					}
+					&::-webkit-input-placeholder {
+						color: rgba(0,0,0,0.4);
+					}
+				}
+			}
+
+			.submit-btn {
+				background-color:rgb(23, 123, 147, .7);
+				color: rgba(256,256,256,10);
+				border:0;
+				border-radius: 15px;
+				display: block;
+				margin: 50px auto; 
+				padding: 15px 45px;
+				width: 100%;
+				font-size: 16px;
+        			font-family: "Montserrat 2";
+				font-weight: bold;
+				cursor: pointer;
+				opacity: 1;
+				visibility: visible;
+				-webkit-transition: all .3s ease;
+
+				&:hover {
+					transition: all .3s ease;
+					background-color: rgb(23, 123, 147, 10);
+				}
+			}
+		}
+		
+		&.slide-up {
+			top: 90%;
+			-webkit-transition: all .3s ease;
+		}
+		
+		&.slide-up .center {
+			top: 10%;
+			-webkit-transform: translate(-50%, 0%);
+			-webkit-transition: all .3s ease;
+		}
+		
+		&.slide-up .form-holder,
+		&.slide-up .submit-btn {
+			opacity: 0;
+			visibility: hidden;
+			-webkit-transition: all .3s ease;
+		}
+		
+		&.slide-up .form-title {
+			font-size: 1em;
+			margin: 0;
+			padding: 0;
+			cursor: pointer;
+			-webkit-transition: all .3s ease;
+		}
+		
+		&.slide-up .form-title span {
+			margin-right: 5px;
+			opacity: 1;
+			visibility: visible;
+			-webkit-transition: all .3s ease;
+		}
+	}
+
+}
+
+
+// Responsive
+
+@media screen and (min-width: 412px) and (max-width: 425px) and (min-height: 845px) and (max-height: 865px)  {
+
+	
+	.form-structor{
+		width: 800px;
+		height: 890px;
+
+		.signup{
+			width: 85%;
+
+			.form-title {
+					margin-top: 40px;
+					}
+		}
+	}
+
+	
+
+}
+
