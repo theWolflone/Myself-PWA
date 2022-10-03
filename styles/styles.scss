@@ -1,3 +1,5 @@
+@import url(../styles/home-dist.css);
+
 @font-face {
       font-family: "Montserrat";
       src: url(../assets/fonts/Montserrat-VariableFont_wght.ttf);
@@ -34,7 +36,7 @@ html,body {
 
 .h2{
   font-family: "Montserrat";
-  font-size: 16px;
+  font-size: 1.9vh;
   font-weight: 200;
   color: rgba(0,0,0,0.6);
 
@@ -43,14 +45,13 @@ html,body {
 .logo{
   display: block;
   margin: auto;
-  margin-top: 75%;
+  margin-top: 35vh;
 }
 
 .form-structor {
 	background-color: #20997b;
-	border-radius: 30px;
-	height: 850px;
-	width: 390px;
+	height: 100vh;
+	width: 100vw;
 	position: relative;
 	overflow: hidden;
 	
@@ -69,7 +70,7 @@ html,body {
 		top: 43%;
 		left: 50%;
 		-webkit-transform: translate(-50%, -50%);
-		width: 90%;
+		width: 88%;
 		z-index: 5;
 		-webkit-transition: all .3s ease;
 		
@@ -87,27 +88,27 @@ html,body {
 		}
 		
 		&.slide-up .form-title {
-			font-size: 1em;
+			font-size: 2.5vh;
 			cursor: pointer;
 		}
 		
 		.form-title {
       font-family: "Quicksand 2";
-      letter-spacing: 2.2px;
+      letter-spacing: 1vw;
 			color: #fff;
 			font-size: 13em;
       font-weight: 100;
-      font-size: 35px ;
+      font-size: 3.5vh ;
 			text-align: center;
-			margin-top: 35px;
-      margin-bottom: -1px;
+			margin-top: 4.5vh;
+      margin-bottom: -0.5vh;
 		}
 		
 		.form-holder {
-			border-radius: 20px;
+			border-radius: 5vw;
 			background-color: rgba(255, 255, 255);
 			overflow: hidden;
-			margin-top: 20px;
+			margin-top: 2vh;
 			opacity: 1;
 			visibility: visible;
 			-webkit-transition: all .3s ease;
@@ -122,12 +123,12 @@ html,body {
           border: 0;
           outline: none;
           box-shadow: none;
-          height: 30px;
-          line-height: 30px;
-          padding: 8px 1px;
+          height: 3vh;
+          line-height: 4vh;
+          padding: 1vh 2vw;
           border-bottom: 1px solid rgba(238, 238, 238, 0.071);
           width: 100%;
-          font-size: 15px;
+          font-size: 1.75vh;
           border-bottom: 0;
           color: rgba(0,0,0,0.6);
           
@@ -147,14 +148,14 @@ html,body {
 				outline: none;
 				box-shadow: none;
 				display: block;
-				height: 46px;
-				line-height: 30px;
-				padding: 2px;
-        padding-bottom: 4px;
-        padding-left: 17px;
+				height: 4.5vh;
+				line-height: 2vh;
+				padding: 1vh;
+        padding-bottom: 1vh;
+        padding-left: 3.6vw;
 				border-bottom: 1px solid #eee;
 				width: 100%;
-				font-size: 16px;
+				font-size: 1.9vh;
 				
 				&:last-child {
 					border-bottom: 0;
@@ -172,17 +173,17 @@ html,body {
 			border-radius: 15px;
 			display: block;
 			margin: 15px auto; 
-			padding: 20px 40px;
-			width: 100%;
-			font-size: 19px;
+			padding: 2vh;
+			width: 80%;
+			font-size: 2.5vh;
 			font-weight: bold;
-			letter-spacing: 1.5px;
+			letter-spacing: .4vw;
 			cursor: pointer;
 			opacity: 1;
 			visibility: visible;
 			-webkit-transition: all .3s ease;
 			
-			&:hover {
+			&:active {
 				transition: all .3s ease;
 				background-color: rgba(0,0,0,0.8);
 			}
@@ -204,12 +205,12 @@ html,body {
 			content: '';
 			position: absolute;
 			left: 50%;
-			top: -30px;
+			top: -5vh;
 			margin: 0;
 			-webkit-transform: translate(-50%, 0);
 			background-color: #f0fff2;
-			width: 460px;
-			height: 100px;
+			width: 120vw;
+			height: 10vh;
 			border-radius: 100%;
 			z-index: 5;
 			-webkit-transition: all .3s ease;
@@ -226,11 +227,11 @@ html,body {
 			
 			
 			.form-title {
-				color: #000;
+				color: #0c3640;
         			font-family: "Quicksand 2";
         			font-weight: 900;
-        			margin-left: -6px;
-				font-size: 1.9em;
+        			margin-left: -3vw;
+				font-size: 4vh;
 				text-align: center;
 
 				span {
@@ -246,7 +247,7 @@ html,body {
 				background-color: #fff;
 				border: 1px solid #eee;
 				overflow: hidden;
-				margin-top: 50px;
+				margin-top: 6vh;
 				opacity: 1;
 				visibility: visible;
 				-webkit-transition: all .3s ease;
@@ -260,12 +261,12 @@ html,body {
 					outline: none;
 					box-shadow: none;
 					display: block;
-					height: 50px;
-					line-height: 30px;
-					padding: 8px 15px;
+					height: 5vh;
+					line-height: 2vh;
+					padding: .9vh 3vw;
 					border-bottom: 1px solid #eee;
 					width: 100%;
-					font-size: 15px;
+					font-size: 2.1vh;
 
 					&:last-child {
 						border-bottom: 0;
@@ -277,15 +278,15 @@ html,body {
 			}
 
 			.submit-btn {
-				background-color:rgb(23, 123, 147, .7);
+				background-color: #4F97A3;
 				color: rgba(256,256,256,10);
 				border:0;
 				border-radius: 15px;
 				display: block;
-				margin: 50px auto; 
-				padding: 15px 45px;
-				width: 100%;
-				font-size: 16px;
+				margin: 3.5vh auto; 
+				padding: 2.5vh 5vw;
+				width: 70%;
+				font-size: 2vh;
         			font-family: "Montserrat 2";
 				font-weight: bold;
 				cursor: pointer;
@@ -293,7 +294,7 @@ html,body {
 				visibility: visible;
 				-webkit-transition: all .3s ease;
 
-				&:hover {
+				&:active {
 					transition: all .3s ease;
 					background-color: rgb(23, 123, 147, 10);
 				}
@@ -319,7 +320,7 @@ html,body {
 		}
 		
 		&.slide-up .form-title {
-			font-size: 1em;
+			font-size: 2.3vh;
 			margin: 0;
 			padding: 0;
 			cursor: pointer;
@@ -327,7 +328,7 @@ html,body {
 		}
 		
 		&.slide-up .form-title span {
-			margin-right: 5px;
+			margin-right: 1vw;
 			opacity: 1;
 			visibility: visible;
 			-webkit-transition: all .3s ease;
@@ -339,23 +340,23 @@ html,body {
 
 // Responsive
 
-@media screen and (min-width: 412px) and (max-width: 425px) and (min-height: 845px) and (max-height: 865px)  {
+// @media screen and (min-width: 412px) and (max-width: 425px) and (min-height: 845px) and (max-height: 865px)  {
 
 	
-	.form-structor{
-		width: 800px;
-		height: 890px;
+// 	.form-structor{
+// 		width: 800px;
+// 		height: 890px;
 
-		.signup{
-			width: 85%;
+// 		.signup{
+// 			width: 85%;
 
-			.form-title {
-					margin-top: 40px;
-					}
-		}
-	}
+// 			.form-title {
+// 					margin-top: 40px;
+// 					}
+// 		}
+// 	}
 
 	
 
-}
+// }
 
