@@ -5,22 +5,22 @@ const router = express.Router();
 const Persona = require('../models/personas.model');
 const mailer = require('../templates/registro-template');
 
-router.post('/registrar-persona', (req, res) => {
+router.post('/RegistrarPersona', (req, res) => {
       let body = req.body;
       let nueva_persona = new Persona({
-            nombre: body.nombre,
-            apellidos: body.apellidos,
-            sexo: body.sexo,
+            Nombre: body.Nombre,
+            Apellidos: body.Apellidos,
+            Sexo: body.Sexo,
             // nacimiento: body.fecha_nacimiento,
+            Edad: body.Edad,
             // identificacion: body.identificacion,
-            edad: body.edad,
-            carnet: body.carnet,
-            seccion: body.seccion,
+            Carnet: body.Carnet,
+            Seccion: body.Seccion,
             // especialidad: body.especialidad,
-            // telefonos: body.telefono,
-            mail: body.mail, 
-            password: body.password,
-            estado: 'activo'
+            Mail: body.Mail, 
+            Password: body.Password,
+            FotoPerfil: body.FotoPerfil,
+            Estado: 1,
       });
 
       nueva_persona.save(
@@ -38,7 +38,7 @@ router.post('/registrar-persona', (req, res) => {
                               personaDB
                   
                         });
-                        mailer.send_mail(personaDB.nombre, personaDB.mail);
+                        mailer.send_mail(personaDB.Nombre, personaDB.Mail);
             
                         }
 
@@ -51,61 +51,7 @@ router.post('/registrar-persona', (req, res) => {
 
 });
 
-// router.post('/agregar-telefono', function (req,res) {
-//       Persona.update({ _id: req.body._id}, {
-//             $push: {
-//                 'telefonos': {
-//                   numero: req.body.numero,
-//                   descripcion: req.body.descripcion
-//                 }
-//             }
-//       },
-//       function (error) {
-//             if (error) {
-//                   return res.json({
-//                         success: false,
-//                         msj: 'No se pudo agregar el teléfono',
-//                         err
-//                   });
-//             } else {
-//                   return res.json({
-//                         success: true,
-//                         msj:'Se agregó correctamente el teléfono.'
-//                   });
-//             }
-//       }
-//       )
-// });
-
-
-router.post('/modificar-persona', function (req, res) {
-      let body = req.body;
-      Persona.updateOne({mail: body.mail},{
-            $set: {
-                nombre: body.nombre,
-                seccion: body.seccion,
-                especialidad: body.especialidad,
-            }
-      },
-      function (error, info) {
-            if (error) {
-                  res.json({
-                        resultado:false,
-                        msg: 'No se pudo modificar el perfil.',
-                        err
-                  });
-            }else{
-                  res.json({
-                        resultado:true,
-                        info:info
-                  })
-            }
-      }
-      )
-})
-
-
-router.get('/listar-personas', (req, res) => {
+router.get('/listarPersonas', (req, res) => {
       Persona.find((err, lista_personas)=>{
             if (err) {
                   res.json({
@@ -123,7 +69,39 @@ router.get('/listar-personas', (req, res) => {
       });
 });
 
-router.get('/buscar-persona-mail', function (req,res) {
+
+router.post('/modificarPersona', function (req, res) {
+      let body = req.body;
+      Persona.updateOne({mail: body.Mail},{
+            $set: {
+                Nombre: body.Nombre,
+                Apellidos: body.Apellidos,
+                Mail: body.Mail,
+                Password: body.Password
+            }
+      },
+      function (error, info) {
+            if (error) {
+                  res.json({
+                        resultado:false,
+                        msg: 'No se pudo actualizar el perfil.',
+                        err
+                  });
+            }else{
+                  res.json({
+                        resultado:true,
+                        msj: 'Los datos se actualizaron exitosamente',
+                        info,
+                  })
+            }
+      }
+      )
+})
+
+
+
+
+router.get('/buscarPersonaMail', function (req,res) {
 
       let mail = req.query.mail;
 
@@ -143,6 +121,46 @@ router.get('/buscar-persona-mail', function (req,res) {
       })
       
 });
+
+router.get('/autenticarPersona', (req, res) => {
+      let params = req.query;
+      Persona.findOne(
+        {
+          Mail: params.Mail,
+          Password: params.Password,
+        },
+        (err, personaDB) => {
+          if (err) {
+            res.json({
+              resultado: false,
+              msj: 'No se pudo obtener datos: ',
+              err,
+            });
+          } else {
+            if (personaDB == null) {
+              res.json({
+                resultado: false,
+                msj: 'Usuario y/o contraseña incorrectos ',
+                personaDB,
+              });
+            } else if (Number(personaDB.Estado) == 0) {
+              //inactivo
+              res.json({
+                resultado: false,
+                msj: 'Usuario inactivo, comuníquese con los administradores',
+                personaDB,
+              });
+            } else {
+              res.json({
+                resultado: true,
+                msj: 'Datos coincidentes: ',
+                personaDB,
+              });
+            }
+          }
+        }
+      );
+    });
 
 
 
