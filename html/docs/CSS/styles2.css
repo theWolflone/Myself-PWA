@@ -1,4 +1,35 @@
-@import url(hiden2.css);
+@import url(hiden.css);
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(../assets/fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+font-family: "Montserrat 2";
+src: url(../assets/fonts/static/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat Normal";
+    src: url(../assets/fonts/static/Montserrat-Regular.ttf);
+  }
+
+@font-face {
+    font-family: "Quicksand";
+    src: url(../assets/fonts/Quicksand-VariableFont_wght.ttf);
+}
+
+@font-face {
+font-family: "Quicksand 2";
+src: url(../../../assets/fonts/static/Quicksand-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Quicksand Thin";
+    src: url(../assets/fonts/static/Montserrat-Thin.ttf);
+}
+
  html{
     overflow-y: hidden;
 } 
@@ -64,10 +95,10 @@ body{
 .in p{
     text-align: center;
     margin: 1vh;
-    font-family: 'Montserrat';
+    font-family: 'Quicksand 2';
     font-style: normal;
-    font-weight: 700;
-    font-size: 4.5vw;
+    font-weight: 800;
+    font-size: 3vh;
     line-height: 34px;
     color: #f0ffe2;
     color: #2099B7;
@@ -89,22 +120,22 @@ body{
 .wh p{
     text-align: center;
     margin: 1vh;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 4.5vw;
-    line-height: 34px;
+    font-family: 'Quicksand 2';
+    font-size: 3vh;
+    line-height: 4.5vh;
     
     color: #f0ffe2;
 }
 .t-lar{
     position: absolute;
     width: 75.4vw;
-    height: 17.4vh;
-    margin: 3.19vh 12.2% 3.19vh 12.2%;
+    height: 18vh;
+    /* margin: 3.19vh 12.2% 3.19vh 12.2%; */
     /*left: 13.5%;*/
     /*left: 11.28vw;*/
-    top: 49.38vh;
+    
+    left: 15vw;
+    top: 55vh;
 
     font-family: 'Montserrat';
     font-style: normal;
@@ -118,7 +149,7 @@ body{
     position: absolute;
     width: 30vw; 
     height: 5.45vh;
-    top: 86.95vh;
+    top: 90vh;
     margin: 0 30vw 0 35vw;
     background-image: url(../assets/chevron-down.svg);
     background: #20997b;
