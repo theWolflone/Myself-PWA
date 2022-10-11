@@ -35,7 +35,7 @@ let myselfCalendar = new Calendar({
             if(events_html) {
               events_display.innerHTML = events_html;
             } else {
-              events_display.innerHTML = '<div class="no-events-text">No events on this day :(</div>';
+              events_display.innerHTML = '<div class="no-events-text">No tienes ninguna actividad o recordatorio :(</div>';
             }
       }     
 });
