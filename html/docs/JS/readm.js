@@ -16,10 +16,10 @@ let imagen=document.querySelector(".chevron-down");
     imagen.addEventListener("click",on);
 })();
 function on(){
-    imagen.src='assets/chevron-up3.svg';
+    imagen.src='assets/chevron-up.svg';
     imagen.addEventListener("click",out);
 }
 function out(){
-    imagen.src='assets/chevron-down3.svg';
+    imagen.src='assets/chevron-down.svg';
     imagen.addEventListener("click",out);
 }
