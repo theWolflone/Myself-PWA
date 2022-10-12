@@ -1,0 +1,1 @@
+function show(){let e=0,t=document.querySelectorAll("input");for(console.log(t),i=0;i<t.length;i++)1==t[i].checked&&(num=t[i].value,e=Number(e)+Number(num));showalert(e)}function showalert(e){Swal.fire({title:e,text:"Do you want to continue",icon:"success",confirmButtonText:"Ok"})}
