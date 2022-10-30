@@ -56,3 +56,15 @@ function handleError(res, reason, message, code) {
 
 const personas = require('./routes/personas.route');
 app.use('/api', personas)
+
+const eventos = require('./routes/events.route');
+app.use('/api', eventos)
+
+const medicaciones = require('./routes/medication.route');
+app.use('/api', medicaciones)
+
+const reacciones = require('./routes/reaction.route');
+app.use('/api', reacciones)
+
+const resultadosTests = require('./routes/testResult.route');
+app.use('/api', resultadosTests)

@@ -19,7 +19,7 @@ router.post('/RegistrarPersona', (req, res) => {
             // especialidad: body.especialidad,
             Mail: body.Mail, 
             Password: body.Password,
-            FotoPerfil: body.FotoPerfil,
+            // FotoPerfil: body.FotoPerfil,
             Estado: 1,
       });
 
@@ -34,7 +34,7 @@ router.post('/RegistrarPersona', (req, res) => {
                   }else{
                         res.json({
                               success: true,
-                              msj: 'Los datos se enviaron de forma exitosa',
+                              msj: 'Los datos se enviaron de forma exitosa.',
                               personaDB
                   
                         });
@@ -72,12 +72,12 @@ router.get('/listarPersonas', (req, res) => {
 
 router.post('/modificarPersona', function (req, res) {
       let body = req.body;
-      Persona.updateOne({mail: body.Mail},{
+      Persona.updateOne({_id: body._id},{
             $set: {
-                Nombre: body.Nombre,
-                Apellidos: body.Apellidos,
-                Mail: body.Mail,
-                Password: body.Password
+                  Nombre: body.Nombre,
+                  Apellidos: body.Apellidos,
+                  Mail: body.Mail,
+                  Password: body.Password
             }
       },
       function (error, info) {
@@ -103,9 +103,9 @@ router.post('/modificarPersona', function (req, res) {
 
 router.get('/buscarPersonaMail', function (req,res) {
 
-      let mail = req.query.mail;
+      let mail = req.query.Mail;
 
-      Persona.find({ mail: mail}, function (err, contactoDB) {
+      Persona.find({ Mail: mail}, function (err, contactoDB) {
             if (err) {
                   return res.json({
                         success: false,
@@ -122,7 +122,7 @@ router.get('/buscarPersonaMail', function (req,res) {
       
 });
 
-router.get('/autenticarPersona', (req, res) => {
+router.get('/AutenticarPersona', (req, res) => {
       let params = req.query;
       Persona.findOne(
         {
@@ -153,7 +153,7 @@ router.get('/autenticarPersona', (req, res) => {
             } else {
               res.json({
                 resultado: true,
-                msj: 'Datos coincidentes: ',
+                msj: 'Datos coincidentes',
                 personaDB,
               });
             }
