@@ -1,28 +1,5 @@
 @import url(footer.css);
-@font-face {
-  font-family: "Montserrat 2";
-  src: url(../assets/fonts/static/Montserrat-Bold.ttf);
-}
-@font-face {
-  font-family: "Montserrat Normal";
-  src: url(../assets/fonts/static/Montserrat-Regular.ttf);
-}
-@font-face {
-  font-family: "Montserrat Med";
-  src: url(../assets/fonts/static/Montserrat-Medium.ttf);
-}
-@font-face {
-  font-family: "Quicksand";
-  src: url(../assets/fonts/Quicksand-VariableFont_wght.ttf);
-}
-@font-face {
-  font-family: "Quicksand 2";
-  src: url(../assets/fonts/static/Quicksand-Medium.ttf);
-}
-@font-face {
-  font-family: "Quicksand Thin";
-  src: url(../assets/fonts/static/Montserrat-Thin.ttf);
-}
+@import url(index-dist.css);
 html {
   background-color: #20997b;
   color: white;
@@ -40,7 +17,7 @@ body {
 }
 
 .container-cart {
-  background-color: #F0FFE2;
+  background-color: #f0ffe2;
   position: fixed;
   height: 40vh;
   width: 100%;
@@ -64,7 +41,8 @@ body {
   color: #134956;
   font-size: 2.3vh;
 }
-.data ul {
+.data output {
+  display: block;
   font-family: "Montserrat Med";
   padding: 0;
 }
@@ -73,15 +51,15 @@ body {
   position: relative;
   text-align: center;
   width: 100vw;
-  top: 52vh;
+  top: 47vh;
   margin: auto;
 }
 .center button {
   padding: 0;
   border: none;
   background: none;
-  background-color: #FFFFE3;
-  color: #1F4650;
+  background-color: #ffffe3;
+  color: #1f4650;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   border: none;
@@ -100,8 +78,8 @@ body {
   padding: 0;
   border: none;
   background: none;
-  background-color: #FFFFE3;
-  color: #1F4650;
+  background-color: #ffffe3;
+  color: #1f4650;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   border: none;
@@ -112,5 +90,18 @@ body {
   font-size: 2.3vh;
   font-family: "Montserrat 2";
   margin: auto;
-  margin-bottom: 10vh;
+  margin-bottom: 7vh;
+}
+.center .link a .button:active {
+  background-color: #1f4650;
+  width: 75vw;
+}
+
+output {
+  margin-bottom: 2vh;
+}
+
+.result {
+  position: relative;
+  top: -0.8vh;
 }

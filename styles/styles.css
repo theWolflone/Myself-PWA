@@ -1,20 +1,6 @@
-@import url(../styles/home-dist.css);
-@font-face {
-  font-family: "Montserrat";
-  src: url(../assets/fonts/Montserrat-VariableFont_wght.ttf);
-}
-@font-face {
-  font-family: "Montserrat 2";
-  src: url(../assets/fonts/static/Montserrat-Bold.ttf);
-}
-@font-face {
-  font-family: "Quicksand";
-  src: url(../assets/fonts/Quicksand-VariableFont_wght.ttf);
-}
-@font-face {
-  font-family: "Quicksand 2";
-  src: url(../assets/fonts/static/Quicksand-Medium.ttf);
-}
+@charset "UTF-8";
+@import url(home-dist.css);
+@import url(index-dist.css);
 html, body {
   position: -webkit-sticky;
   position: sticky;
@@ -72,7 +58,7 @@ html, body {
   -webkit-transition: all 0.3s ease;
 }
 .form-structor .signup.slide-up {
-  top: 5%;
+  top: 3%;
   -webkit-transform: translate(-50%, 0%);
   -webkit-transition: all 0.3s ease;
 }
@@ -81,7 +67,7 @@ html, body {
   visibility: hidden;
 }
 .form-structor .signup.slide-up .form-title {
-  font-size: 2.5vh;
+  font-size: 3vh;
   cursor: pointer;
 }
 .form-structor .signup .form-title {
@@ -97,7 +83,7 @@ html, body {
 }
 .form-structor .signup .form-holder {
   border-radius: 5vw;
-  background-color: rgb(255, 255, 255);
+  background-color: #f6fff7;
   overflow: hidden;
   margin-top: 2vh;
   opacity: 1;
@@ -139,8 +125,10 @@ html, body {
   padding-bottom: 1vh;
   padding-left: 3.6vw;
   border-bottom: 1px solid #eee;
-  width: 100%;
+  background-color: #f6fff7;
+  width: 81.2vw;
   font-size: 1.9vh;
+  border-radius: 5vw;
 }
 .form-structor .signup .form-holder .input:last-child {
   border-bottom: 0;
@@ -171,7 +159,7 @@ html, body {
 }
 .form-structor .login {
   position: absolute;
-  top: 13%;
+  top: 19%;
   left: 0;
   right: 0;
   bottom: 0;
@@ -238,8 +226,9 @@ html, body {
   line-height: 2vh;
   padding: 0.9vh 3vw;
   border-bottom: 1px solid #eee;
-  width: 100%;
+  width: 72.5vw;
   font-size: 2.1vh;
+  border-radius: 3.1vw;
 }
 .form-structor .login .center .form-holder .input:last-child {
   border-bottom: 0;
@@ -294,4 +283,60 @@ html, body {
   opacity: 1;
   visibility: visible;
   -webkit-transition: all 0.3s ease;
+}
+
+select {
+  /* Reset Select */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  color: #fff;
+  background-color: var(--darkgray);
+  background-image: none;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 2vh;
+  font-family: "Montserrat";
+  border-radius: 4vw;
+}
+
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  display: flex;
+  width: 75vw;
+  height: 5vh;
+  margin: auto;
+  border-radius: 4vw;
+  overflow: hidden;
+  border: solid #20997b 0.4px;
+  margin-bottom: 2vh;
+}
+
+/* Arrow */
+.select::after {
+  content: "▼";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1.5vh;
+  background-color: #20997b;
+  transition: 0.25s all ease;
+  pointer-events: none;
+}
+
+/* Transition */
+.select:active::after {
+  color: #2099b7;
 }

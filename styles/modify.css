@@ -1,31 +1,4 @@
-@font-face {
-  font-family: "Montserrat 2";
-  src: url(../assets/fonts/static/Montserrat-Bold.ttf);
-}
-@font-face {
-  font-family: "Montserrat Normal";
-  src: url(../assets/fonts/static/Montserrat-Regular.ttf);
-}
-@font-face {
-  font-family: "Montserrat Med";
-  src: url(../assets/fonts/static/Montserrat-Medium.ttf);
-}
-@font-face {
-  font-family: "Montserrat Light";
-  src: url(../assets/fonts/static/Montserrat-Light.ttf);
-}
-@font-face {
-  font-family: "Quicksand";
-  src: url(../assets/fonts/Quicksand-VariableFont_wght.ttf);
-}
-@font-face {
-  font-family: "Quicksand 2";
-  src: url(../assets/fonts/static/Quicksand-Medium.ttf);
-}
-@font-face {
-  font-family: "Quicksand Thin";
-  src: url(../assets/fonts/static/Montserrat-Thin.ttf);
-}
+@import url(index-dist.css);
 html {
   background-color: #FFFFE3;
   font-family: "Montserrat";
@@ -45,7 +18,7 @@ body {
 .formContainer {
   background-color: #20997B;
   height: 76vh;
-  margin-top: 20vh;
+  margin-top: 25vh;
   text-align: center;
 }
 
@@ -66,7 +39,7 @@ input {
   border-radius: 3vw;
   border: none;
   height: 6vh;
-  width: 60vw;
+  width: 78vw;
   font-size: 2.3vh;
   font-family: "Montserrat Light";
   padding-left: 3vw;
@@ -95,7 +68,7 @@ button {
   border: none;
   color: #FFFFE3;
   font-family: "Montserrat Med";
-  font-size: 2vh;
+  font-size: 2.4vh;
 }
 
 .form {

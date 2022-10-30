@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(index-dist.css);
 .creardisplay {
   position: absolute;
   width: 80vw;

@@ -1,27 +1,4 @@
-@font-face {
-  font-family: "Montserrat 2";
-  src: url(../assets/fonts/static/Montserrat-Bold.ttf);
-}
-@font-face {
-  font-family: "Montserrat Normal";
-  src: url(../assets/fonts/static/Montserrat-Regular.ttf);
-}
-@font-face {
-  font-family: "Montserrat Med";
-  src: url(../assets/fonts/static/Montserrat-Medium.ttf);
-}
-@font-face {
-  font-family: "Quicksand";
-  src: url(../assets/fonts/Quicksand-VariableFont_wght.ttf);
-}
-@font-face {
-  font-family: "Quicksand 2";
-  src: url(../assets/fonts/static/Quicksand-Medium.ttf);
-}
-@font-face {
-  font-family: "Quicksand Thin";
-  src: url(../assets/fonts/static/Montserrat-Thin.ttf);
-}
+@import url(index-dist.css);
 * {
   padding: 0;
   margin: 0;
@@ -65,7 +42,7 @@ body {
   width: 100vw;
   height: auto;
   margin: auto;
-  top: 7vh;
+  top: 5vh;
   box-sizing: border-box;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -106,7 +83,9 @@ body {
   display: -ms-grid;
   display: grid;
   margin: auto;
-
+  -ms-grid-columns: (minmax(20px, 55px))[7];
+  grid-template-columns: repeat(7, minmax(20px, 55px));
+  font-family: var(--cal-font-family-header);
 }
 
 .calendar__body {
@@ -114,7 +93,7 @@ body {
 }
 
 .calendar__day-text {
-  font-size: 1.9vh;
+  font-size: 2.2vh;
 }
 
 .calendar__day.calendar__day-other {
@@ -139,8 +118,73 @@ body {
   color: var(--cal-header-color);
 }
 
+.iconContainer {
+  display: block;
+  position: relative;
+  background-color: #20997b;
+  border: none;
+  border-radius: 3vw;
+  z-index: 10;
+}
+
 .bloc-icon {
   position: relative;
+  display: block;
   left: 8vw;
   top: 4vh;
+  width: 0;
+}
+
+.events-display {
+  position: absolute;
+  width: 100vw;
+  border-top-left-radius: 5vw;
+  border-top-right-radius: 5vw;
+  background-color: #FFFFE3;
+  display: flex;
+  flex-direction: column;
+  height: 39vh;
+  margin: auto;
+  bottom: 0vh;
+  overflow: auto;
+}
+
+.event-title {
+  color: #134956;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.event {
+  position: relative;
+  font-family: "Montserrat Med";
+  padding-left: 2vh;
+  padding-right: 36vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  border-radius: 12px;
+  margin: 2vw;
+}
+
+.event-title {
+  color: #134956;
+  font-size: 2.4vh;
+}
+
+.no-events-text {
+  color: #134956;
+  font-family: "Montserrat Med";
+  text-align: center;
+  font-size: 2.4vh;
+  margin-top: 3vh;
+  padding: 3vw;
+}
+
+.event-topic {
+  color: #134956;
+}
+
+.event-free-text, .event-paid-text {
+  font-family: "Montserrat 2";
+  color: #134956;
 }
