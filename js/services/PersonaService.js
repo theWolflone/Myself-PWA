@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 async function RegistrarPersona(
   pNombre,
@@ -8,28 +8,32 @@ async function RegistrarPersona(
   pCarnet,
   pSeccion,
   pMail,
-  pPassword,
-  pFotoPerfil
+  pPassword
+  // pFotoPerfil
 ) {
   let result = {};
   await axios({
-    method: 'post',
-    url: apiUrl + '/RegistrarPersona',
-    responseType: 'json',
+    method: "post",
+    url: apiUrl + "/RegistrarPersona",
+    responseType: "json",
     data: {
-      'Nombre': pNombre,
-      'Apellidos': pApellidos,
-      'Sexo': pSexo,
-      'Edad': pEdad,
-      'Carnet': pCarnet,
-      'Seccion': pSeccion,
-      'Mail': pMail,
-      'Password': pPassword,
-      'FotoPerfil': pFotoPerfil,
+      Nombre: pNombre,
+      Apellidos: pApellidos,
+      Sexo: pSexo,
+      Edad: pEdad,
+      Carnet: pCarnet,
+      Seccion: pSeccion,
+      Mail: pMail,
+      Password: pPassword,
+      // 'FotoPerfil': pFotoPerfil,
     },
   })
     .then((res) => {
       result = res.data;
+      if (result != null && result.resultado == true) {
+        SetPersonaConsultada(result);
+        SetSesionActiva(result);
+      }
       console.log(result);
     })
     .catch((err) => {
@@ -41,9 +45,9 @@ async function RegistrarPersona(
 async function listaPersonas() {
   let result = {};
   await axios({
-    method: 'get',
-    url: apiUrl + '/listarPersonas',
-    responseType: 'json',
+    method: "get",
+    url: apiUrl + "/listarPersonas",
+    responseType: "json",
   })
     .then((res) => {
       result = res.data;
@@ -54,16 +58,14 @@ async function listaPersonas() {
   return result;
 }
 
-
-async function BuscarPersona(p_id, pMail) {
+async function BuscarPersona(pMail) {
   let result = {};
   await axios({
-    method: 'get',
-    url: apiUrl + '/buscarPersonaMail',
-    responseType: 'json',
+    method: "get",
+    url: apiUrl + "/buscarPersonaMail",
+    responseType: "json",
     params: {
-      '_id': p_id,
-      'Mail': pMail,
+      Mail: pMail,
     },
   })
     .then((res) => {
@@ -76,30 +78,68 @@ async function BuscarPersona(p_id, pMail) {
 }
 
 async function ModificarPersona(
+  p_id,
   pNombre,
   pApellidos,
-  pCorreo,
-  pPassword,
-  pFotoPerfil,
+  pMail,
+  pPassword
+  // pFotoPerfil,
 ) {
   let result = {};
   await axios({
-    method: 'post',
-    url: apiUrl + '/ModificarPersona',
-    responseType: 'json',
+    method: "post",
+    url: apiUrl + "/modificarPersona",
+    responseType: "json",
     data: {
-      'Nombre': pNombre,
-      'Apellidos': pApellidos,
-      'Correo': pCorreo,
-      'Password': pPassword,
-      'FotoPerfil': pFotoPerfil,
+      _id: p_id,
+      Nombre: pNombre,
+      Apellidos: pApellidos,
+      Mail: pMail,
+      Password: pPassword,
+      // 'FotoPerfil': pFotoPerfil,
     },
   })
-    .then((res) => {
+    .then(async (res) => {
       result = res.data;
+      if (result != null && result.resultado == true) {
+        let personaDB = await BuscarPersona(pMail);
+        SetSesionActiva(personaDB);
+
+        let personaLoggeada = GetSesionActiva();
+        LimpiarLSPersonaConsultada();
+        SetPersonaConsultada(personaLoggeada.persona[0]);
+        SetSesionActiva(personaLoggeada.persona[0]);
+      }
     })
     .catch((err) => {
       console.log(err);
     });
   return result;
+}
+
+function LimpiarLSPersonaConsultada() {
+  localStorage.removeItem("datosPersonaConsultada");
+}
+
+function SetPersonaConsultada(pDatosPersona) {
+  localStorage.setItem("datosPersonaConsultada", JSON.stringify(pDatosPersona));
+  console.log(pDatosPersona);
+}
+
+function SetSesionActiva(pDatosPerfil) {
+  localStorage.setItem("datosSesionActiva", JSON.stringify(pDatosPerfil));
+  console.log(pDatosPerfil);
+}
+
+function GetSesionActiva() {
+  let datosSesionActiva = null;
+  let localStorageData = localStorage.getItem("datosSesionActiva");
+  if (
+    localStorageData != null &&
+    localStorageData != undefined &&
+    localStorageData != ""
+  ) {
+    datosSesionActiva = JSON.parse(localStorageData);
+  }
+  return datosSesionActiva;
 }

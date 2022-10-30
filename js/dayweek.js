@@ -18,7 +18,7 @@ if (weekday == 0) {
 
       }else if (weekday==3) {
 
-            dayweek='Miercoles';
+            dayweek='Miércoles';
 
       }else if (weekday==4) {
 

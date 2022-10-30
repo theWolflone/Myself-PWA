@@ -267,15 +267,15 @@ let myselfCalendar = new Calendar({
             },
             {
                 "endDate": "2022-10-28T00:00:00.000Z",
-                "free": false,
+                "free": true,
                 "creationDate": "2022-05-04T11:33:59.221Z",
-                "name": "Principal Developer (USA Time Zone)",
+                "name": "Salir a correr",
                 "topics": [
-                    "leadership"
+                    "Ir hasta el parque de Aserrí y pasar comprando frutas."
                 ],
                 "creator": "sFdb6nAkYjflAezbyZFsqqIkMm02",
                 "startDate": "2022-10-27T00:00:00.000Z",
-                "url": "https://principal.dev",
+                "url": " ",
                 "twitter": "eduardsi",
                 "continentCode": "ON",
                 "category": "masterclass",
