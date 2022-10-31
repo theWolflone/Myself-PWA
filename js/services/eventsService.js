@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 async function EscribirNota(pDescripcion, pFecha, p_idPersona) {
   let result = {};
@@ -9,12 +9,12 @@ async function EscribirNota(pDescripcion, pFecha, p_idPersona) {
       data: {
         Descripcion: pDescripcion,
         Fecha: pFecha,
-        idPersona: p_idPersona
+        _idPersona: p_idPersona
       },
     })
     .then((res) => {
       result = res.data;
-      if (result != null && result.resultado == true) {
+      if (result != null && result.success == true) {
         GuardarNota(result);
       }
       console.log(result);
@@ -35,12 +35,12 @@ async function EscribirRecordatorio(pNombre, pDescripcion, pFecha, p_idPersona) 
             Nombre: pNombre,
             Descripcion: pDescripcion,
             Fecha: pFecha,
-            idPersona: p_idPersona
+            _idPersona: p_idPersona
           },
         })
         .then((res) => {
           result = res.data;
-          if (result != null && result.resultado == true) {
+          if (result != null && result.success == true) {
             GuardarRecordatorio(result);
           }
           console.log(result);
