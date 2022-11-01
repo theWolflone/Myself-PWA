@@ -15,7 +15,7 @@
     <div class="opacity">
       <div class="ccontenedor">
         <div class="link animate__animated animate__backInRight" id="calendar">
-          <a href="calendar.html">
+          <a href="calendar.html" onclick="ObtenerEventsID();">
             <div class="button">
               <svg
                 width="14vw"
@@ -92,6 +92,7 @@
             type="button"
             class="face"
             onclick="safeBox('supersad')"
+            value="1"
             id="supersad"
           >
             <svg
@@ -147,7 +148,13 @@
             </svg>
           </button>
 
-          <button type="button" class="face" onclick="safeBox('sad')" id="sad">
+          <button
+            type="button"
+            class="face"
+            onclick="safeBox('sad')"
+            value="1"
+            id="sad"
+          >
             <svg
               width="13.2vw"
               height="6.2vh"
@@ -204,6 +211,7 @@
           <button
             type="button"
             class="face"
+            value="1"
             onclick="safeBox('normal')"
             id="normal"
           >
@@ -263,6 +271,7 @@
           <button
             type="button"
             class="face"
+            value="1"
             onclick="safeBox('happy')"
             id="happy"
           >
@@ -321,6 +330,7 @@
 
           <button
             type="button"
+            value="1"
             class="face"
             onclick="safeBox('superhappy')"
             id="superhappy"
@@ -382,8 +392,8 @@
 
       <div class="safef" id="safeFace">
         <button
-          onclick="safecolor()"
           class="safefaces animate__animated animate__zoomIn"
+          onclick="SetSentimiento()"
         >
           <h3>Guardar</h3>
         </button>
@@ -721,10 +731,16 @@
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="../js/dayweek.js"></script>
   <script src="../js/home.js"></script>
-  <script src="../js/faces.js"></script>
   <script src="../js/services/LoginService.js"></script>
   <script src="../js/Constantes.js"></script>
   <script src="../js/services/PersonaService.js"></script>
   <script src="../js/services/CRUPersonasService.js"></script>
+  <script src="../js/services/eventsService.js"></script>
+  <script src="../js/services/medicationService.js"></script>
+  <script src="../js/services/reactionService.js"></script>
+  <script src="../js/controllers/reactionController.js"></script>
+  <script src="../js/controllers/eventsController.js"></script>
+  <script src="../js/controllers/medicationController.js"></script>
+  <script src="../js/controllers/ControllerGeneral.js"></script>
   <script src="../js/controllers/PerfilPersonaController.js"></script>
 </html>
