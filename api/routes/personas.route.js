@@ -59,30 +59,6 @@ router.get("/listarPersonas", (req, res) => {
   });
 });
 
-// router.get('/BuscarPersona', (req, res) => {
-//   let params = req.query;
-//     params._id != '' &&
-//     params._id != null &&
-//     params._id != undefined
-//    {
-//     Persona.findOne({ _id: params._id }, (err, personaDB) => {
-//       if (err) {
-//         res.json({
-//           resultado: false,
-//           msj: 'No se pudo obtener datos: ',
-//           err,
-//         });
-//       } else {
-//         res.json({
-//           resultado: true,
-//           msj: 'Los datos se obtuvieron de manera correcta por id: ',
-//           personaDB,
-//         });
-//       }
-//     });
-//   };
-
-
 router.post("/modificarPersona", function (req, res) {
   let body = req.body;
   Persona.updateOne(
@@ -170,6 +146,25 @@ router.get("/AutenticarPersona", (req, res) => {
       }
     }
   );
+});
+
+router.get("/BuscarPersonaPorId", (req, res) => {
+  let params = req.query;
+  Persona.findOne({ _id: params._id }, (err, personaDB) => {
+    if (err || personaDB === null) {
+      res.json({
+        resultado: false,
+        msj: "No se pudo obtener datos",
+        err,
+      });
+    } else {
+      res.json({
+        resultado: true,
+        msj: "Datos encontrados",
+        personaDB,
+      });
+    }
+  });
 });
 
 module.exports = router;

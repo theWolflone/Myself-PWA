@@ -56,11 +56,10 @@ router.post("/EscribirRecordatorio", (req, res) => {
 });
 
 
-
-router.get("/obtenerEventosPersonaID", (req, res) => {
+router.get('/BuscarEventosPersona', (req, res) => {
   let params = req.query;
   if (
-    params._idPersona != "" &&
+    params._idPersona != '' &&
     params._idPersona != null &&
     params._idPersona != undefined
   ) {
@@ -68,18 +67,19 @@ router.get("/obtenerEventosPersonaID", (req, res) => {
       if (err) {
         res.json({
           resultado: false,
-          msj: "No se pudo encontar la información",
+          msj: 'No se pudo encontar la información',
           err,
         });
       } else {
         res.json({
           resultado: true,
-          msj: "La información se encontró con éxito",
+          msj: 'La información se encontró con éxito',
           _idPersonaDB,
         });
       }
     });
   }
 });
+
 
 module.exports = router;
