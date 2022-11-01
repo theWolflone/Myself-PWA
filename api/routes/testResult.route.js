@@ -7,6 +7,7 @@ const ResultadoTest = require("../models/testResult.model");
 router.post("/MostrarResultado", (req, res) => {
   let body = req.body;
   let nuevo_resultado = new ResultadoTest({
+    nameTest: body.nameTest,
     testResult: body.testResult,
     valoracion: body.valoracion,
     Fecha: body.Fecha,

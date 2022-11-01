@@ -3,6 +3,7 @@
 const mongoose = require("mongoose");
 
 const schema_testresult = new mongoose.Schema({
+  nameTest: { type: String, required: false, unique: false},
   testResult: { type: String, required: false, unique: false },
   valoracion: { type: String, required: false, unique: false },
   Fecha: { type: Date, required: true, unique: false },

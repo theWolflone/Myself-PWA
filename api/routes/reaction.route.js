@@ -7,11 +7,7 @@ const Reaccion = require("../models/reaction.model");
 router.post("/IngresarReaccion", (req, res) => {
   let body = req.body;
   let nueva_emocion = new Reaccion({
-    Feliz: body.Feliz,
-    Contento: body.Contento,
-    Neutro: body.Neutro,
-    Desanimado: body.Desanimado,
-    Triste: body.Triste,
+    Sentimiento: body.Sentimiento,
     Fecha: body.Fecha,
     _idPersona: body._idPersona,
   });

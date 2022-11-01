@@ -7,7 +7,7 @@ const schema_medication = new mongoose.Schema({
   tCada: { type: Number, required: true, unique: false },
   tDurante: { type: Number, required: true, unique: false },
   fechaInicio: { type: Date, required: true, unique: true },
-  _idPersona: { type: String, required: false, unique: true },
+  _idPersona: { type: String, required: false, unique: false },
 });
 
 module.exports = mongoose.model(
