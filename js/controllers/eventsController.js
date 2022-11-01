@@ -76,3 +76,15 @@ async function AlmacenarRecordatorio() {
     });
   }
 }
+
+
+async function ObtenerEventsID() {
+  let result = await obtenerEventosID(idPersona);
+  if (result != {} && result.success == true) {
+    return result._idPersonaDB;
+  } else {
+    return ' ';
+  }
+}
+
+
