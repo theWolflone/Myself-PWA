@@ -10,15 +10,15 @@
 </head>
 <body>
     <div class="container">
-        <a href="../DesDepresion.html" class="chevron-left animate__animated animate__slideInRight" ><svg width="25" height="25" viewBox="0 0 22 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <a href="../DesAnsiedad.html" class="chevron-left animate__animated animate__slideInRight" ><svg width="25" height="25" viewBox="0 0 22 33" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M21.1945 0.690391C22.2685 1.61091 22.2685 3.10337 21.1945 4.02389L6.63909 16.5L21.1945 28.9761C22.2685 29.8966 22.2685 31.3891 21.1945 32.3096C20.1206 33.2301 18.3794 33.2301 17.3055 32.3096L0.805456 18.1667C-0.268485 17.2462 -0.268485 15.7538 0.805456 14.8332L17.3055 0.690391C18.3794 -0.23013 20.1206 -0.23013 21.1945 0.690391Z" fill="#f0ffe2"/>
             </svg></a>
         <div class="title animate__animated animate__slideInRight">
-            <p>Test de Depresión</p>
+            <p id="nombreTest">Test de Ansiedad</p>
         </div>
         <div class="question1">
             <div class="num animate__animated animate__slideInLeft"><p>1</p></div>
-            <div class="pregunta animate__animated animate__slideInRight"><p>Poco interés o placer en hacer las cosas</p></div>
+            <div class="pregunta animate__animated animate__slideInRight" style="padding-left: 1vw;"><p>Sentirse nervioso, ansioso, notar que se le ponen los nervios de punta.</p></div>
                 <div class="animate__animated animate__fadeIn">
               <label for="pregunta" >
                 <input type="radio" id="circle" class="option5" name="option" value="3"
@@ -31,7 +31,7 @@
         </div>
         <div class="question3">
             <div class="num animate__animated animate__slideInLeft"><p>2</p></div>
-            <div class="pregunta animate__animated animate__slideInRight"><p>Se ha sentido decaído(a), deprimido(a), o sin esperanzas </p></div>
+            <div class="pregunta animate__animated animate__slideInRight"><p>No ser capaz de parar o controlar sus preocupaciones.</p></div>
                 <div class="animate__animated animate__fadeIn">
                     <label for="pregunta2">
                         <input type="radio" id="circle" class="option5" name="option1" value="3"
@@ -44,7 +44,7 @@
         </div>
         <div class="question3">
             <div class="num animate__animated animate__slideInLeft"><p>3</p></div>
-            <div class="pregunta animate__animated animate__slideInRight"><p>Dificultad para dormir o exceso de sueño</p></div>
+            <div class="pregunta animate__animated animate__slideInRight"><p>Preocuparse demasiado sobre diferentes cosas.</p></div>
                 <div class="animate__animated animate__fadeIn">
                 <label for="pregunta2">
                     <input type="radio" id="circle" class="option5" name="option2" value="3"
@@ -57,7 +57,7 @@
         </div>
         <div class="question3">
             <div class="num animate__animated animate__slideInLeft"><p>4</p></div>
-            <div class="pregunta animate__animated animate__slideInRight"><p style="margin: auto 2vw;">Se ha sentido cansado(a) o con poca energía</p></div>
+            <div class="pregunta animate__animated animate__slideInRight"><p>Dificultad para relajarse.</p></div>
                 <div class="animate__animated animate__fadeIn">
                 <label for="pregunta2">
                     <input type="radio" id="circle" class="option5" name="option3" value="3"
@@ -70,8 +70,7 @@
         </div>
         <div class="question3">
             <div class="num animate__animated animate__slideInLeft"><p>5</p></div>
-            <div class="pregunta animate__animated animate__slideInRight"><p>Se ha sentido mal con usted mismo(a) ,o que es un
-                fracaso</p></div>
+            <div class="pregunta animate__animated animate__slideInRight"><p>Estar tan desasosegado que le resulta difícil parar quieto.</p></div>
                 <div class="animate__animated animate__fadeIn">
                 <label for="pregunta2">
                     <input type="radio" id="circle" class="option5" name="option4" value="3"
@@ -84,7 +83,7 @@
         </div>
         <div class="question3">
             <div class="num animate__animated animate__slideInLeft"><p>6</p></div>
-        <div class="pregunta animate__animated animate__slideInRight"><p>Ha tenido dificultad para concentrarse en tareas del día a día</p></div>
+        <div class="pregunta animate__animated animate__slideInRight"><p>Sentirse fácilmente disgustado o irritable.</p></div>
             <div class="animate__animated animate__fadeIn">
             <label for="pregunta2">
                 <input type="radio" id="circle" class="option5" name="option5" value="3"
@@ -95,9 +94,9 @@
             </label>
             </div>
         </div>
-        <div class="question3">
+        <div class="last-question">
             <div class="num animate__animated animate__slideInLeft"><p>7</p></div>
-        <div class="pregunta animate__animated animate__slideInRight"><p>¿Se ha estado moviendo o hablando tan lento,o rápido , que es notable?</p></div>
+        <div class="pregunta animate__animated animate__slideInRight"><p>Sentirse asustado como si algo horrible pudiese pasar.</p></div>
             <div class="animate__animated animate__fadeIn">
             <label for="pregunta2">
                 <input type="radio" id="circle" class="option6" name="option6" value="3"
@@ -108,39 +107,12 @@
             </label>
             </div>
         </div>
-        <div class="question3">
-            <div class="num animate__animated animate__slideInLeft"><p>8</p></div>
-        <div class="pregunta animate__animated animate__slideInRight"><p> Ha pensado que estaría mejor muerto(a) o se le ha ocurrido
-            lastimarse de alguna manera </p></div>
-            <div class="animate__animated animate__fadeIn">
-            <label for="pregunta2">
-                <input type="radio" id="circle" class="option6" name="option7" value="3"
-                autofocus checked>Casi todos los días<br>
-                <input type="radio" id="circle" class="option6" name="option7" value="2">Más de la mitad de los días<br>
-                <input type="radio" id="circle" class="option6" name="option7" value="1">Varios días<br>
-                <input type="radio" id="circle" class="option6" name="option7" value="0">Para nada<br>
-            </label>
-            </div>
-        </div>
-        <div class="last-question">
-            <div class="num animate__animated animate__slideInLeft"><p>9</p></div>
-        <div class="pregunta animate__animated animate__slideInRight"><p>Con poco apetito o ha comido en exceso</p></div>
-            <div class="animate__animated animate__fadeIn">
-            <label for="pregunta2">
-                <input type="radio" id="circle" class="option6" name="option8" value="3"
-                autofocus checked>Casi todos los días<br>
-                <input type="radio" id="circle" class="option6" name="option8" value="2">Más de la mitad de los días<br>
-                <input type="radio" id="circle" class="option6" name="option8" value="1">Varios días<br>
-                <input type="radio" id="circle" class="option6" name="option8" value="0">Para nada<br>
-            </label>
-            </div>
-        </div>
         <div class="show">
             <button onclick="show()" class="button-show">Enviar respuestas</button>
         </div>
     </div>
 
 </body>
-<script src="js/depresion.js"></script>
+<script src="js/ansiedad.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.37/dist/sweetalert2.all.min.js"></script>
 </html>

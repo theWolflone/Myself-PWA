@@ -168,6 +168,44 @@ label input{
     height: 5vh;
     z-index: 999;
     font-size: 3vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    color: #20997B;
+    text-align: center;
+    font-weight: 700;
+    font-size: 5.128vw;
+    line-height: 6.154vw;
+    padding: 1vh;
+    padding-left: 8vw;
+}
+.swal2-html-container {
+    z-index: 3;
+    justify-content: center;
+    margin: 1em 1.6em 0.3em;
+    padding: 0;
+    overflow: auto;
+    color: inherit;
+    font-size: 1.125em;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    word-wrap: break-word;
+    word-break: break-word;
+    font-weight: 600;
+    font-family: 'Montserrat';
+}
+.swal2-title {
+    position: relative;
+    max-width: 100%;
+    margin: 0;
+    padding: 0.8em 1em 0;
+    color: inherit;
+    font-size: 1.875em;
+    font-weight: 600;
+    text-align: center;
+    text-transform: none;
+    word-wrap: break-word;
+    font-family: 'Montserrat';
 }
 @font-face {
     font-family: 'Montserrat';

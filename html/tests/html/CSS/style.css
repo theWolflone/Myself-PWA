@@ -102,6 +102,7 @@ html{
     background: var(--lime);
     border-bottom-left-radius: 50px;
     border-top-left-radius: 50px;
+    padding: 1vw;
 }
 .pregunta p{
     /* margin: 15px; */
@@ -182,14 +183,55 @@ label input{
     font-size: 3vh;
     font-family: 'Montserrat';
     font-style: normal;
+    color: #20997B;
+    text-align: center;
     font-weight: 700;
     font-size: 5.128vw;
     line-height: 6.154vw;
+    padding: 1vh;
+    padding-left: 8vw;
 }
 .button-show p{
     margin: auto;
 }
-
+.swal2-html-container {
+    z-index: 3;
+    justify-content: center;
+    margin: 1em 1.6em 0.3em;
+    padding: 0;
+    overflow: auto;
+    color: inherit;
+    font-size: 1.125em;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    word-wrap: break-word;
+    word-break: break-word;
+    font-weight: 550;
+    font-family: 'Montserrat';
+}
+.swal2-title {
+    position: relative;
+    max-width: 100%;
+    margin: 0;
+    padding: 0.8em 1em 0;
+    color: inherit;
+    font-size: 1.875em;
+    font-weight: 600;
+    text-align: center;
+    text-transform: none;
+    word-wrap: break-word;
+    font-family: 'Montserrat';
+}
+.swal-styled.swal-confirm {
+    border: 0;
+    padding: 1vh 3vh;
+    border-radius: 0.25em;
+    background: initial;
+    background-color: #20997b;
+    color: #fff;
+    font-size: 1em;
+}
 @font-face {
     font-family: 'Montserrat';
     src: url(../CSS/Montserrat/Montserrat-VariableFont_wght.ttf);
