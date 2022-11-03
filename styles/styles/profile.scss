@@ -1,0 +1,120 @@
+@import url(footer.css);
+@import url(index-dist.css);
+
+html {
+  background-color: #20997b;
+  color: #ffff;
+  font-family: "Montserrat";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.container-cart {
+  background-color: #f0ffe2;
+  position: fixed;
+  height: 40vh;
+  width: 100%;
+
+  h1 {
+    font-family: "Quicksand Thin";
+    font-size: 4.8vh;
+    color: #20997b;
+  }
+
+  .align {
+    margin-left: 8vw;
+    margin-top: 5vh;
+  }
+
+  .foto {
+    position: absolute;
+    left: 60vw;
+    top: 14vh;
+  }
+}
+
+.data {
+  color: #134956;
+  font-size: 2.3vh;
+  output {
+    display: block;
+    font-family: "Montserrat Med";
+    padding: 0;
+  }
+}
+
+.center {
+  position: relative;
+  text-align: center;
+  width: 100vw;
+  top: 47vh;
+  margin: auto;
+
+  button {
+    padding: 0;
+    border: none;
+    background: none;
+    background-color: #ffffe3;
+    color: #1f4650;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    border: none;
+    border-radius: 5vw;
+    width: 70vw;
+    height: 7vh;
+    padding-top: 0.5vh;
+    font-size: 2.3vh;
+    font-family: "Montserrat 2";
+    margin-bottom: 10vh;
+  }
+
+  
+
+  .link {
+    a {
+      text-decoration: none;
+
+      .button {
+        padding: 0;
+        border: none;
+        background: none;
+        background-color: #ffffe3;
+        color: #1f4650;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        border: none;
+        border-radius: 5vw;
+        width: 70vw;
+        height: 5vh;
+        padding-top: 2vh;
+        font-size: 2.3vh;
+        font-family: "Montserrat 2";
+        margin: auto;
+        margin-bottom: 7vh;
+
+      }
+
+      .button:active {
+            background-color: #1f4650;
+            width: 75vw;
+      }
+    }
+  }
+}
+
+output {
+  margin-bottom: 2vh;
+}
+
+.result{
+      position: relative;
+      top: -.8vh;
+}

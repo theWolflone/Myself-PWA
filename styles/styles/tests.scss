@@ -1,0 +1,182 @@
+@import url(../styles/footer-dist.css);
+@import url(index-dist.css);
+
+html{
+	background-color: #17677A; 
+      color: #FFFF;
+	font-family: "Montserrat";
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      margin: 0;
+      width: 100%;
+      height: 95%;
+}
+
+body{
+      margin: 0;
+      height: 100%;
+}
+
+h1{
+      font-family: "Quicksand Thin";
+      font-size: 5vh;
+      margin-left: 5vw;
+      color: #FFFFE3;
+}
+
+.h2{
+      text-align: center;
+      letter-spacing: .5vw;
+      font-size: 2.6vh;
+      color: #FFFFE3;
+}
+
+
+.testsGenerales{
+
+      .test{
+            position: relative;
+            width: 92vw;
+            height: 16.9vh;
+            background: #FFFFE3;
+            border-radius: 16px;
+            margin: auto;
+            box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.5);
+
+
+
+            .headert{
+                  svg{
+                        position: absolute;
+                        left: 5vw;
+                        top: 2.5vh;
+                  }
+                  
+                  .title2{
+                        padding-top: 1.4vh;
+                  }
+                  
+                  .title{
+                        color: #114F5E;
+                        position: absolute;
+                        left: 9vw;
+                        font-size: 2.7vh;
+                        font-family: "Montserrat 3";
+                        letter-spacing: .1vw;
+                        width: 90%;
+                  }
+
+                  
+            }
+
+           
+
+            
+      }
+
+
+      .doc{
+            position: relative;
+            background-color: #20997B;
+            color: #F0FFE2;
+            top: 10.5vh;
+            padding: 2vw;
+            left: 5vw;
+            border-radius: 5vw;
+            width: 80vw;
+            height: 5vh;
+            text-align: center;
+            vertical-align: middle;
+            border: none;
+            font-family: "Montserrat 4";
+            font-size: 2.6vh;
+            letter-spacing: .4vw;
+
+            
+      }
+      
+      
+}
+
+.testSalud{
+
+      .test{
+            position: relative;
+            width: 92vw;
+            height: 16.9vh;
+            background: #20997B;
+            border-radius: 16px;
+            margin: auto;
+            box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.5);
+
+            .headert{
+                  svg{
+                        position: absolute;
+                        left: 5vw;
+                        top: 2.5vh;
+                  }
+                  
+                  .title{
+                        color: #F0FFE2;
+                        position: absolute;
+                        left: 9vw;
+                        font-size: 2.7vh;
+                        font-family: "Montserrat 3";
+                        letter-spacing: .1vw;
+                        width: 90%;
+                  }
+            }
+      }
+
+
+      .doc{
+            position: relative;
+            background-color: #F0FFE2;
+            color: #114F5E;
+            top: 10.5vh;
+            padding: 2vw;
+            left: 5vw;
+            border-radius: 5vw;
+            width: 80vw;
+            height: 5vh;
+            text-align: center;
+            vertical-align: middle;
+            border: none;
+            font-family: "Montserrat 4";
+            font-size: 2.6vh;
+            letter-spacing: .4vw;
+
+            
+      }
+}
+
+.creatButton{
+      background-color: #17677A;
+      border: #17677A solid 1.2vw;
+}
+
+
+.titleSalud{
+      margin-top: 10vh;
+}
+
+
+#test2{
+      top: 4vh;
+      left: 0vw;
+
+}
+
+#test3{
+      top: 8vh;
+}
+
+
+
+.spaceFooter{
+      height: 25vh;
+}
+
+#testSaludFisica{
+      padding-top: 5vh;
+}

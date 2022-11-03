@@ -1,0 +1,198 @@
+@import url(index-dist.css);
+
+*{
+      padding: 0;
+      margin: 0;
+}
+
+html{
+	background-color: #20997B; 
+      color: #FFFF;
+	font-family: "Montserrat";
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+}
+
+body{
+      margin: 0;
+      height: 100%;
+}
+
+
+
+
+.color-calendar.basic {
+      --cal-color-primary: #134956;
+      --cal-font-family-header: "Quicksand", sans-serif;
+      --cal-font-family-weekdays: "Montserrat Normal", sans-serif;
+      --cal-font-family-body: "Montserrat Normal", sans-serif;
+      --cal-drop-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+      --cal-border: none;
+      --cal-border-radius: 0.5rem;
+      --cal-header-color: black;
+      --cal-weekdays-color: black;
+      border-radius: var(--cal-border-radius);
+      box-shadow: none;
+      color: #FFFFff;
+      background-color: #20997B;
+      border: none;
+    }
+
+    .color-calendar {
+      position: relative;
+      width: 100vw;
+      height: auto;
+      margin: auto;
+      top: 5vh;
+      box-sizing: border-box;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      overflow: hidden;
+      font-family: var(--cal-font-family-body);
+      font-size: 1rem;
+    }
+
+    .calendar__day-box {
+      border-radius: 0.5rem;
+      background-color: var(--cal-color-primary);
+      opacity: 0.1;
+    }
+
+    .color-calendar .calendar__monthyear {
+      font-size: 3.7vh;
+      margin: 0 auto;
+      text-align: center;
+      grid-column: 2/span 5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .color-calendar.basic .calendar__weekdays .calendar__weekday {
+      font-weight: 500;
+      font-size: 2.1vh;
+      opacity: 1;
+      color: var(--cal-weekdays-color);
+    }
+
+    .color-calendar .calendar__header {
+      position: relative;
+      display: grid;
+      margin: auto;
+      grid-template-columns: repeat(7, minmax(20px, 55px));
+      font-family: var(--cal-font-family-header);
+    }
+
+    .calendar__body{
+      margin: auto;
+    }
+
+    .calendar__day-text{
+      font-size: 2.2vh;
+    }
+
+    .calendar__day.calendar__day-other{
+      font-size: 1.9vh;
+      
+    }
+
+    .color-calendar.basic .calendar__days .calendar__day-other {
+      opacity: .5;
+    }
+
+    .color-calendar.basic .calendar__arrow-inner::before {
+      content: "";
+      width: 1.2em;
+      height: 1.2em;
+      position: absolute;
+      border-style: solid;
+      border-width: 0.15em 0.15em 0 0;
+      display: inline-block;
+      transform-origin: center center;
+      transform: rotate(-45deg);
+      border-radius: 1px;
+      color: var(--cal-header-color);
+  }
+  
+  .iconContainer{
+    display: block;
+    position: relative;
+      background-color: #20997b;
+      border: none;
+      border-radius: 3vw;
+      z-index: 10;
+  }
+
+  .bloc-icon{
+      position: relative;
+      display: block;
+      left: 8vw;
+      top: 4vh;
+      width: 0;
+      
+  }
+
+
+
+  .events-display{
+    position: absolute;
+    width: 100vw;
+    border-top-left-radius: 5vw;
+    border-top-right-radius: 5vw;
+    background-color: #FFFFE3;
+    display: flex;
+    flex-direction: column;
+    height: 39vh;
+    margin: auto;
+    bottom: 0vh;
+    overflow: auto;
+  }
+
+ 
+
+  .event-title {
+    color: #134956;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.event{
+  position: relative;
+  font-family: 'Montserrat Med';
+  padding-left: 2vh;
+  padding-right: 36vw;
+
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  border-radius: 12px;
+  margin: 2vw;
+}
+
+.event-title{
+  color: #134956;
+  font-size: 2.4vh;
+}
+
+.no-events-text{
+  color: #134956;
+  font-family: "Montserrat Med";
+  text-align: center;
+  font-size: 2.4vh;
+  margin-top: 3vh;
+  padding: 3vw;
+}  
+
+.event-topic{
+  color: #134956;
+}
+
+.event-free-text, .event-paid-text{
+  font-family: "Montserrat 2";
+  color: #134956;
+}
+  

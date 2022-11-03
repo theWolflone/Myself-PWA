@@ -1,0 +1,362 @@
+@charset "UTF-8";
+@import url(index-dist.css);
+.creardisplay {
+  position: absolute;
+  width: 80vw;
+  height: 55vh;
+  top: 20vh;
+  left: 5vw;
+  z-index: 100;
+  padding: 5vw;
+  border-radius: 40px;
+  background: #f0ffe2;
+  display: flex;
+  justify-content: center;
+  display: none;
+}
+
+.container1 {
+  display: none;
+  position: absolute;
+}
+.container1 h2 {
+  color: #20997B;
+  font-weight: 400;
+  font-size: 5vh;
+  line-height: 3vh;
+  text-align: center;
+}
+.container1 button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 66vw;
+  height: 7vh;
+  margin: auto;
+  margin-bottom: 6vh;
+  top: 3vh;
+  background-color: #1F4650;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  color: #FFFFE3;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 1.9vh;
+  border: none;
+}
+
+.container2 {
+  display: none;
+  position: absolute;
+}
+.container2 h2 {
+  color: #FFFFE3;
+  background-color: #20997B;
+  font-weight: 600;
+  font-size: 2.7vh;
+  line-height: 3vh;
+  display: block;
+  text-align: right;
+  width: 50vw;
+  padding: 1.4vw;
+  padding-right: 4vw;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  position: relative;
+  left: 25vw;
+  top: -0.8vh;
+  margin-bottom: 1.5vh;
+}
+.container2 h2 i {
+  vertical-align: middle;
+}
+.container2 button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 66vw;
+  height: 7vh;
+  margin: auto;
+  margin-top: 2vh;
+  background-color: #1F4650;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  color: #FFFFE3;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 1.9vh;
+  border: none;
+  cursor: pointer;
+}
+.container2 textarea {
+  width: 73vw;
+  padding: 4vw;
+  height: 30vh;
+  background: #FFFEF4;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  border: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2vh;
+  resize: none;
+}
+.container2 .back {
+  position: absolute;
+  display: flex;
+  justify-content: left;
+  top: 2.1vh;
+}
+
+.container3 {
+  display: none;
+  position: absolute;
+}
+.container3 h2 {
+  color: #FFFFE3;
+  background-color: #20997B;
+  font-weight: 600;
+  font-size: 2.5vh;
+  line-height: 3vh;
+  display: block;
+  text-align: right;
+  width: 61vw;
+  padding: 1.6vw;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  position: relative;
+  left: 14vw;
+  top: -0.1vh;
+  margin-bottom: 1.5vh;
+}
+.container3 h2 i {
+  vertical-align: middle;
+}
+.container3 label {
+  color: #1A353A;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.3vh;
+}
+.container3 button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 66vw;
+  height: 7vh;
+  margin: auto;
+  margin-top: 4vh;
+  background-color: #1F4650;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  color: #FFFFE3;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 1.9vh;
+  border: none;
+  cursor: pointer;
+}
+.container3 input {
+  display: block;
+  width: 73vw;
+  height: 3vh;
+  padding: 1vh;
+  margin-bottom: 1.5vh;
+  background: #FFFEF4;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  border: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2vh;
+}
+.container3 .times {
+  display: inline-block;
+  margin-top: 2vh;
+}
+.container3 #medevery {
+  width: 27vw;
+  margin-right: 9vw;
+}
+.container3 #divmedtime #medtime {
+  width: 27vw;
+  margin: auto;
+}
+.container3 .since {
+  text-align: center;
+  margin-top: 1vh;
+}
+.container3 .since #medsince {
+  text-align: center;
+  width: 42vw;
+  margin: auto;
+}
+.container3 .since #medsince::-webkit-calendar-picker-indicator {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: transparent;
+  background: 0 0;
+  margin: 0;
+  opacity: 0;
+  pointer-events: auto;
+}
+.container3 .since #medsince::-webkit-calendar-picker-indicator {
+  height: 5vh;
+  position: absolute;
+  top: 36vh;
+  left: 0;
+  color: transparent;
+  background: 0 0;
+  margin: 0;
+  opacity: 0;
+  pointer-events: auto;
+  overflow: hidden;
+}
+.container3 .back {
+  position: absolute;
+  display: flex;
+  justify-content: left;
+  top: 2.1vh;
+  left: -1vw;
+}
+
+.items {
+  margin-top: 5vh;
+}
+
+.container4 {
+  display: none;
+  position: absolute;
+}
+.container4 h2 {
+  color: #FFFFE3;
+  background-color: #20997B;
+  font-weight: 600;
+  font-size: 2.5vh;
+  line-height: 3vh;
+  display: block;
+  text-align: right;
+  width: 61vw;
+  padding: 1.6vw;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  position: relative;
+  left: 14vw;
+  top: -0.1vh;
+  margin-bottom: 1.5vh;
+}
+.container4 h2 i {
+  vertical-align: middle;
+}
+.container4 label {
+  color: #1A353A;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.3vh;
+}
+.container4 button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 66vw;
+  height: 7vh;
+  margin: auto;
+  margin-top: 3vh;
+  background-color: #1F4650;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  color: #FFFFE3;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 1.9vh;
+  border: none;
+  cursor: pointer;
+}
+.container4 .start {
+  text-align: center;
+  margin-top: 2vh;
+}
+.container4 textarea {
+  width: 73vw;
+  padding: 3vw;
+  height: 13vh;
+  background: #FFFEF4;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  border: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2vh;
+  resize: none;
+  display: block;
+}
+.container4 input {
+  display: block;
+  width: 73vw;
+  height: 3vh;
+  padding: 1vh;
+  margin-bottom: 1.5vh;
+  background: #FFFEF4;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  border: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2vh;
+}
+.container4 .back {
+  position: absolute;
+  display: flex;
+  justify-content: left;
+  top: 2.1vh;
+  left: -1vw;
+}
+.container4 .inicioDía {
+  text-align: center;
+  margin-top: 5vh;
+}
+.container4 #inicioDia {
+  text-align: center;
+  width: 37vw;
+  margin: auto;
+  padding-left: 10vw;
+}
+.container4 #inicioDia::-webkit-calendar-picker-indicator {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: transparent;
+  background: 0 0;
+  margin: 0;
+  opacity: 0;
+  pointer-events: auto;
+}
+.container4 #inicioDia::-webkit-calendar-picker-indicator {
+  height: 4vh;
+  position: absolute;
+  top: 39vh;
+  left: 0;
+  color: transparent;
+  background: 0 0;
+  margin: 0;
+  opacity: 0;
+  pointer-events: auto;
+  overflow: hidden;
+}
