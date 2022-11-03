@@ -31,4 +31,32 @@ router.post("/MostrarResultado", (req, res) => {
   });
 });
 
+router.get("/BuscarTestsPersona", (req, res) => {
+  let params = req.query;
+  if (
+    params._idPersona != "" &&
+    params._idPersona != null &&
+    params._idPersona != undefined
+  ) {
+    ResultadoTest.find(
+      { _idPersona: params._idPersona },
+      (err, _idPersonaDB) => {
+        if (err) {
+          res.json({
+            resultado: false,
+            msj: "No se pudo encontar la información",
+            err,
+          });
+        } else {
+          res.json({
+            resultado: true,
+            msj: "La información se encontró con éxito",
+            _idPersonaDB,
+          });
+        }
+      }
+    );
+  }
+});
+
 module.exports = router;
