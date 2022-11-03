@@ -1,6 +1,7 @@
 @import url(hiden.css);
  html{
     overflow-y: hidden;
+    overflow-x: hidden;
 } 
 
 *{
@@ -10,6 +11,8 @@
 
 body{
     width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .img{
@@ -99,7 +102,7 @@ body{
 }
 .t-lar{
     position: absolute;
-    width: 75.4vw;
+    width: 70.4vw;
     height: 17.4vh;
     margin: 3.19vh 12.2% 3.19vh 12.2%;
     /*left: 13.5%;*/

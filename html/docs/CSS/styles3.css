@@ -1,6 +1,7 @@
 @import url(hiden3.css);
  html{
     overflow-y: hidden;
+    overflow-x: hidden;
 } 
 
 *{
@@ -28,6 +29,7 @@ body{
     top: -8vh;
     height: 50vh;
     z-index: -999;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .chevron-left{
     position: absolute;

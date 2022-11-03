@@ -14,8 +14,8 @@
   <body>
     <div class="opacity">
       <div class="ccontenedor">
-        <div class="link animate__animated animate__backInRight" id="calendar">
-          <a href="calendar.html" onclick="ObtenerEventsID();">
+        <div class="link" >
+          <button class="animate__animated animate__backInRight" id="btnCalendar">
             <div class="button">
               <svg
                 width="14vw"
@@ -70,7 +70,7 @@
                   </filter>
                 </defs>
               </svg></div
-          ></a>
+          ></button>
         </div>
       </div>
 
@@ -730,17 +730,23 @@
 
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="../js/dayweek.js"></script>
-  <script src="../js/home.js"></script>
   <script src="../js/services/LoginService.js"></script>
-  <script src="../js/Constantes.js"></script>
   <script src="../js/services/PersonaService.js"></script>
   <script src="../js/services/CRUPersonasService.js"></script>
-  <script src="../js/services/eventsService.js"></script>
+  <script src="../js/services/notesService.js"></script>
+  <script src="../js/services/recordatoriosService.js"></script>
+  <!-- <script src="../js/services/eventsService.js"></script> -->
   <script src="../js/services/medicationService.js"></script>
   <script src="../js/services/reactionService.js"></script>
-  <script src="../js/controllers/reactionController.js"></script>
-  <script src="../js/controllers/eventsController.js"></script>
-  <script src="../js/controllers/medicationController.js"></script>
+  <script src="../js/Constantes.js"></script>
   <script src="../js/controllers/ControllerGeneral.js"></script>
+  <script src="../js/controllers/reactionController.js"></script>
+  <script src="../js/controllers/calendarController.js"></script>
+  <script src="../js/controllers/recordatoriosController.js"></script>
+  <script src="../js/controllers/notasController.js"></script>
+  <!-- <script src="../js/controllers/eventsController.js"></script> -->
+  <script src="../js/controllers/medicationController.js"></script>
   <script src="../js/controllers/PerfilPersonaController.js"></script>
+  <script src="../js/home.js"></script>
+  
 </html>
