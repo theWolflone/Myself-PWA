@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 let boton = document.getElementById("safeFace");
 let feeling = "";
@@ -37,5 +37,17 @@ async function GuardarEmocion() {
       confirmButtonText: "Ok",
       confirmButtonColor: "#1F4650",
     });
+  }
+}
+
+async function ListaReacciones() {
+  let result = await GetReacciones(idPersona);
+  if (result != {} && result.resultado == true) {
+    let ListaReacciones = result;
+
+    console.log(ListaReacciones);
+  } else {
+    imprimirMsjError(result.msj);
+    return;
   }
 }

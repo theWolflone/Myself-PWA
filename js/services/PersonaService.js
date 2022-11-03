@@ -30,9 +30,9 @@ async function RegistrarPersona(
   })
     .then((res) => {
       result = res.data;
-      if (result != null && result.resultado == true) {
-        SetPersonaConsultada(result);
-        SetSesionActiva(result);
+      if (result != null && result.success == true) {
+        SetPersonaConsultada(result.personaDB);
+        SetSesionActiva(result.personaDB);
       }
       console.log(result);
     })

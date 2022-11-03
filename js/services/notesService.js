@@ -1,17 +1,13 @@
 "use strict";
 
-async function SeleccionarEmocion(
-  pSentimiento,
-  pFecha,
-  p_idPersona
-) {
+async function EscribirNota(pDescripcion, pFecha, p_idPersona) {
   let result = {};
   await axios({
     method: "post",
-    url: apiUrl + "/IngresarReaccion",
+    url: apiUrl + "/EscribirNota",
     responseType: "json",
     data: {
-      Sentimiento: pSentimiento,
+      Descripcion: pDescripcion,
       Fecha: pFecha,
       _idPersona: p_idPersona,
     },
@@ -19,7 +15,7 @@ async function SeleccionarEmocion(
     .then((res) => {
       result = res.data;
       if (result != null && result.success == true) {
-        AlmacenarEmocion(result);
+        GuardarNota(result);
       }
       console.log(result);
     })
@@ -29,11 +25,11 @@ async function SeleccionarEmocion(
   return result;
 }
 
-async function GetReacciones(p_idPersona) {
+async function GetNotas(p_idPersona) {
   let result = {};
   await axios({
     method: "get",
-    url: apiUrl + "/BuscarReaccionesPersona",
+    url: apiUrl + "/BuscarNotasPersona",
     responseType: "json",
     params: {
       _idPersona: p_idPersona,
@@ -48,7 +44,12 @@ async function GetReacciones(p_idPersona) {
   return result;
 }
 
-function AlmacenarEmocion(pDatosEmocion) {
-  localStorage.setItem("datosEmociones", JSON.stringify(pDatosEmocion));
-  console.log(pDatosEmocion);
+function GuardarNota(pDatosEvento) {
+  localStorage.setItem("datosEventos", JSON.stringify(pDatosEvento));
+  console.log(pDatosEvento);
+}
+
+function GuardarRecordatorio(pDatosEvento) {
+  localStorage.setItem("datosEventos", JSON.stringify(pDatosEvento));
+  console.log(pDatosEvento);
 }

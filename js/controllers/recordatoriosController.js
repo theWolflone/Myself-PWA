@@ -1,24 +1,11 @@
 "use strict";
 
 let idPersona = GetIdPersona();
-let fecha = GetFecha();
 let queryString = window.location.search;
 let urlParams = new URLSearchParams(queryString);
 let acc = urlParams.get("acc"); //M = Modificar C=Crear nuevo(CrudPersonas.html)
 if (acc == null) {
   acc = "N"; //Nuevo  (no se llama desde el CRUD)
-}
-
-// console.log(idPersona);
-// console.log(fecha);
-
-function Validaciones() {
-  if (ValidarCampos() == false) {
-    return false;
-  } else {
-    AlmacenarNota();
-    //     Swal.close();
-  }
 }
 
 function ValidacionesRecordatorios() {
@@ -27,27 +14,6 @@ function ValidacionesRecordatorios() {
   } else {
     AlmacenarRecordatorio();
     //     Swal.close();
-  }
-}
-
-async function AlmacenarNota() {
-  let result = await EscribirNota(
-    document.getElementById("descripcionNota").value,
-    fecha,
-    idPersona
-  );
-  console.log(result);
-  if (result != null && result.success == true && result.notaDB != null) {
-    ImprimirMsjSuccess(result.msj);
-  } else {
-    Swal.fire({
-      title: "¡Error!",
-      background: "#F0FFE2",
-      text: result.msj,
-      icon: "error",
-      confirmButtonText: "Ok",
-      confirmButtonColor: "#1F4650",
-    });
   }
 }
 
@@ -77,12 +43,12 @@ async function AlmacenarRecordatorio() {
   }
 }
 
-async function ListaEventos() {
-  let result = await GetEventos(idPersona);
+async function ListaRecordatorios() {
+  let result = await GetRecordatorios(idPersona);
   if (result != {} && result.resultado == true) {
-    let listaEvents = result;
-    
-    return listaEvents;
+    let listaRecordatorios = result;
+
+    return listaRecordatorios;
   } else {
     imprimirMsjError(result.msj);
     return;

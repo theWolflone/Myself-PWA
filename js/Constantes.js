@@ -2,7 +2,6 @@
 
 const apiUrl = "http://localhost:3000/api";
 
-
 function ObtenerEstado(pEstado) {
   switch (Number(pEstado)) {
     case 1:
@@ -134,15 +133,12 @@ cerrarSesion.addEventListener("click", CerrarSesionActiva);
 
 function GetIdPersona() {
   let _idPersona = personaLoggeada._id;
-  console.log(_idPersona);
+  // console.log(_idPersona);
   return _idPersona;
 }
 
-
 function GetFecha() {
   let Fecha = Date();
-  console.log(Fecha);
+  // console.log(Fecha);
   return Fecha;
 }
-
-

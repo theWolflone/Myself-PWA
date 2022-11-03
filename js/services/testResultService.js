@@ -25,6 +25,26 @@ async function GuardarTestResultado(
         GuardarResultado(result);
       }
       console.log(result);
+
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  return result;
+}
+
+async function GetTestsResultados(p_idPersona) {
+  let result = {};
+  await axios({
+    method: "get",
+    url: apiUrl + "/BuscarTestsPersona",
+    responseType: "json",
+    params: {
+      _idPersona: p_idPersona,
+    }
+  })
+    .then((res) => {
+      result = res.data;
     })
     .catch((err) => {
       console.log(err);

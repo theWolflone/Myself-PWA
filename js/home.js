@@ -30,7 +30,7 @@ function notas() {
     background: "#F0FFE2",
     html:
       '<textarea id="descripcionNota" required wrap="soft" style="resize: none; width: 70vw; height: 25vh; border: none; border-radius: 15px; padding: 4vw; margin:auto; box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25); background: #FFFEF4; font-size: 1.9vh; font-family: Montserrat Normal;" placeholder="Escribe cómo te has sentido hoy..."></textarea>' +
-      '<button onclick="Validaciones()" style="width: 40vw; font-family: Montserrat Normal; height:8vh; background-color: #1F4650; border-radius: 20px; margin-top: 2vh"; >' +
+      '<button onclick="ValidacionesNotas()" style="width: 40vw; font-family: Montserrat Normal; height:8vh; background-color: #1F4650; border-radius: 20px; margin-top: 2vh"; >' +
       '<h3 style="color: #FFFFE3; font-size: 2.2vh;">Guardar</h3>' +
       "</button>",
     focusConfirm: false,

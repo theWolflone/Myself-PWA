@@ -26,7 +26,7 @@ async function EscribirNota(pDescripcion, pFecha, p_idPersona) {
 }
 
 async function EscribirRecordatorio(
-  pNombre,
+  pNombreAsunto,
   pDescripcion,
   pFecha,
   p_idPersona
@@ -37,7 +37,7 @@ async function EscribirRecordatorio(
     url: apiUrl + "/EscribirRecordatorio",
     responseType: "json",
     data: {
-      Nombre: pNombre,
+      NombreAsunto: pNombreAsunto,
       Descripcion: pDescripcion,
       Fecha: pFecha,
       _idPersona: p_idPersona,
@@ -56,16 +56,15 @@ async function EscribirRecordatorio(
   return result;
 }
 
-
-async function obtenerEventosID(pIdPersona) {
+async function GetEventos(p_idPersona) {
   let result = {};
   await axios({
     method: "get",
-    url: apiUrl + "/obtenerEventosPersonaID",
+    url: apiUrl + "/BuscarEventosPersona",
     responseType: "json",
     params: {
-      _idPersona: pIdPersona,
-    },
+      _idPersona: p_idPersona,
+    }
   })
     .then((res) => {
       result = res.data;
@@ -73,17 +72,7 @@ async function obtenerEventosID(pIdPersona) {
     .catch((err) => {
       console.log(err);
     });
-    console.log(result);
   return result;
-}
-
-async function DatosPersona(p_id) {
-  let result = await BuscarPersona(p_id);
-  if (result != null && result.resultado == true && result.personaDB != null) {
-    return result.personaDB;
-  } else {
-    return ' ';
-  }
 }
 
 function GuardarNota(pDatosEvento) {

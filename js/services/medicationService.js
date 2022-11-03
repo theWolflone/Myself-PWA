@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 async function EscribirMedicacion(
   pNombreMedicamento,
@@ -26,6 +26,25 @@ async function EscribirMedicacion(
         GuardarMedicacion(result);
       }
       console.log(result);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  return result;
+}
+
+async function GetMedicacion(p_idPersona) {
+  let result = {};
+  await axios({
+    method: "get",
+    url: apiUrl + "/BuscarMedicacionesPersona",
+    responseType: "json",
+    params: {
+      _idPersona: p_idPersona,
+    },
+  })
+    .then((res) => {
+      result = res.data;
     })
     .catch((err) => {
       console.log(err);
