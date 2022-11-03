@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <a
+        href="../profile.html"
+        class="chevron-left animate__animated animate__slideInRight"
+        ><svg
+          width="21.84px"
+          height="28.06px"
+          viewBox="0 0 22 33"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M21.1945 0.690391C22.2685 1.61091 22.2685 3.10337 21.1945 4.02389L6.63909 16.5L21.1945 28.9761C22.2685 29.8966 22.2685 31.3891 21.1945 32.3096C20.1206 33.2301 18.3794 33.2301 17.3055 32.3096L0.805456 18.1667C-0.268485 17.2462 -0.268485 15.7538 0.805456 14.8332L17.3055 0.690391C18.3794 -0.23013 20.1206 -0.23013 21.1945 0.690391Z"
+            fill="#f0ffe2"
+          /></svg
+      ></a>
+      <div class="title animate__animated animate__slideInRight">
+        <p>Últimos resultados de tus test</p>
+      </div>
+      <div class="right animate__animated animate__slideInRight">
+        <button class="button" onclick="readm(1)">
+          <svg
+            width="20"
+            height="10"
+            viewBox="0 0 20 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M11.0102 9.63388C10.4523 10.122 9.54774 10.122 8.98985 9.63388L0.418419 2.13388C-0.139474 1.64573 -0.139474 0.854272 0.418419 0.366117C0.97631 -0.122039 1.88083 -0.122039 2.43872 0.366117L10 6.98223L17.5613 0.366117C18.1192 -0.122039 19.0237 -0.122039 19.5816 0.366117C20.1395 0.854272 20.1395 1.64573 19.5816 2.13388L11.0102 9.63388Z"
+              fill="#20997B"
+            />
+          </svg>
+        </button>
+        <div class="titleTest">
+          <p>
+            Test de salud y <br />
+            estilo de vida
+          </p>
+        </div>
+        <div class="resandate">
+          <div class="date">
+            <img src="assets/63-calendar.svg" class="calendar" alt="" />
+            <p id="date_p">Aún sin realizar</p>
+          </div>
+          <br />
+          <div class="estado hide">
+            <img src="assets/88-tick-circle.svg" class="imgres" alt="" />
+            <p class="resultado">pendiente</p>
+          </div>
+        </div>
+        <div class="hiden">
+          <div class="valoracion hide">
+            <p>Valoración</p>
+          </div>
+          <div class="largeText hide">
+            <img src="assets/comentario1.svg" alt="" />
+            <p id="comentario">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              mollis dolor.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="left animate__animated animate__slideInLeft">
+        <button class="buttonl" onclick="read(1)">
+          <svg
+            width="20"
+            height="10"
+            viewBox="0 0 20 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M11.0102 9.63388C10.4523 10.122 9.54774 10.122 8.98985 9.63388L0.418419 2.13388C-0.139474 1.64573 -0.139474 0.854272 0.418419 0.366117C0.97631 -0.122039 1.88083 -0.122039 2.43872 0.366117L10 6.98223L17.5613 0.366117C18.1192 -0.122039 19.0237 -0.122039 19.5816 0.366117C20.1395 0.854272 20.1395 1.64573 19.5816 2.13388L11.0102 9.63388Z"
+              fill="#20997B"
+            />
+          </svg>
+        </button>
+        <div class="titleTestl">
+          <p>Test de salud</p>
+        </div>
+        <div class="resandatel">
+          <div class="datel">
+            <img src="assets/63-calendar.svg" class="calendar" alt="" />
+            <p id="date_p">Aún sin realizar</p>
+          </div>
+          <br />
+          <div class="estadol hide">
+            <img src="assets/88-tick-circle.svg" class="imgres" alt="" />
+            <p class="resultado">pendiente</p>
+          </div>
+        </div>
+        <div class="hiden1">
+          <div class="valoracionl hide">
+            <p>Valoración</p>
+          </div>
+          <div class="largeTextl hide" style="margin-left: 5vw">
+            <img src="assets/comentario1.svg" alt="" />
+            <p id="comentario" style="margin-right: 8vw; margin-left: 9vw">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              mollis dolor.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="right animate__animated animate__slideInRight">
+        <button class="button" onclick="readm(2)">
+          <svg
+            width="20"
+            height="10"
+            viewBox="0 0 20 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M11.0102 9.63388C10.4523 10.122 9.54774 10.122 8.98985 9.63388L0.418419 2.13388C-0.139474 1.64573 -0.139474 0.854272 0.418419 0.366117C0.97631 -0.122039 1.88083 -0.122039 2.43872 0.366117L10 6.98223L17.5613 0.366117C18.1192 -0.122039 19.0237 -0.122039 19.5816 0.366117C20.1395 0.854272 20.1395 1.64573 19.5816 2.13388L11.0102 9.63388Z"
+              fill="#20997B"
+            />
+          </svg>
+        </button>
+        <div class="titleTest">
+          <p>Test de depresión</p>
+        </div>
+        <div class="resandate">
+          <div class="date">
+            <img src="assets/63-calendar.svg" class="calendar" alt="" />
+            <p id="date_p">Aún sin realizar</p>
+          </div>
+          <br />
+          <div class="estado hide">
+            <img src="assets/88-tick-circle.svg" class="imgres" alt="" />
+            <p class="resultado">Pendiente</p>
+          </div>
+        </div>
+        <div class="hiden">
+          <div class="valoracion hide">
+            <p>Valoración</p>
+          </div>
+          <div class="largeText hide">
+            <img src="assets/comentario1.svg" alt="" />
+            <p id="comentario">
+              Sin realizar aún.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="left animate__animated animate__slideInLeft">
+        <button class="buttonl" onclick="read(2)">
+          <svg
+            width="20"
+            height="10"
+            viewBox="0 0 20 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M11.0102 9.63388C10.4523 10.122 9.54774 10.122 8.98985 9.63388L0.418419 2.13388C-0.139474 1.64573 -0.139474 0.854272 0.418419 0.366117C0.97631 -0.122039 1.88083 -0.122039 2.43872 0.366117L10 6.98223L17.5613 0.366117C18.1192 -0.122039 19.0237 -0.122039 19.5816 0.366117C20.1395 0.854272 20.1395 1.64573 19.5816 2.13388L11.0102 9.63388Z"
+              fill="#20997B"
+            />
+          </svg>
+        </button>
+        <div class="titleTestl">
+          <p>Test de Ansiedad</p>
+        </div>
+        <div class="resandatel">
+          <div class="datel">
+            <img src="assets/63-calendar.svg" class="calendar" alt="" />
+            <p id="date_p">Aún sin realizar</p>
+          </div>
+          <br />
+          <div class="estadol hide">
+            <img src="assets/88-tick-circle.svg" class="imgres" alt="" />
+            <p class="resultado">pendiente</p>
+          </div>
+        </div>
+        <div class="hiden1">
+          <div class="valoracionl hide">
+            <p>Valoración</p>
+          </div>
+          <div class="largeTextl hide" style="margin-left: 5vw">
+            <img src="assets/comentario1.svg" alt="" />
+            <p id="comentario" style="margin-right: 8vw; margin-left: 9vw">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              mollis dolor.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="right animate__animated animate__slideInRight">
+        <button class="button" onclick="readm(3)">
+          <svg
+            width="20"
+            height="10"
+            viewBox="0 0 20 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M11.0102 9.63388C10.4523 10.122 9.54774 10.122 8.98985 9.63388L0.418419 2.13388C-0.139474 1.64573 -0.139474 0.854272 0.418419 0.366117C0.97631 -0.122039 1.88083 -0.122039 2.43872 0.366117L10 6.98223L17.5613 0.366117C18.1192 -0.122039 19.0237 -0.122039 19.5816 0.366117C20.1395 0.854272 20.1395 1.64573 19.5816 2.13388L11.0102 9.63388Z"
+              fill="#20997B"
+            />
+          </svg>
+        </button>
+        <div class="titleTest">
+          <p>Test de TDA-TDAH</p>
+        </div>
+        <div class="resandate">
+          <div class="date">
+            <img src="assets/63-calendar.svg" class="calendar" alt="" />
+            <p id="date_p">Aún sin realizar</p>
+          </div>
+          <br />
+          <div class="estado hide">
+            <img src="assets/88-tick-circle.svg" class="imgres" alt="" />
+            <p class="resultado">pendiente</p>
+          </div>
+        </div>
+        <div class="hiden">
+          <div class="valoracion hide">
+            <p>Valoración</p>
+          </div>
+          <div class="largeText hide">
+            <img src="assets/comentario1.svg" alt="" />
+            <p id="comentario">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              mollis dolor.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="left animate__animated animate__slideInLeft">
+        <button class="buttonl" onclick="read(3)">
+          <svg
+            width="20"
+            height="10"
+            viewBox="0 0 20 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M11.0102 9.63388C10.4523 10.122 9.54774 10.122 8.98985 9.63388L0.418419 2.13388C-0.139474 1.64573 -0.139474 0.854272 0.418419 0.366117C0.97631 -0.122039 1.88083 -0.122039 2.43872 0.366117L10 6.98223L17.5613 0.366117C18.1192 -0.122039 19.0237 -0.122039 19.5816 0.366117C20.1395 0.854272 20.1395 1.64573 19.5816 2.13388L11.0102 9.63388Z"
+              fill="#20997B"
+            />
+          </svg>
+        </button>
+        <div class="titleTestl">
+          <p>Test de TCA</p>
+        </div>
+        <div class="resandatel">
+          <div class="datel">
+            <img src="assets/63-calendar.svg" class="calendar" alt="" />
+            <p id="date_p">Aún sin realizar</p>
+          </div>
+          <br />
+          <div class="estadol hide">
+            <img src="assets/88-tick-circle.svg" class="imgres" alt="" />
+            <p class="resultado">pendiente</p>
+          </div>
+        </div>
+        <div class="hiden1">
+          <div class="valoracionl hide">
+            <p>Valoración</p>
+          </div>
+          <div class="largeTextl hide" style="margin-left: 5vw">
+            <img src="assets/comentario1.svg" alt="" />
+            <p id="comentario" style="margin-right: 8vw; margin-left: 9vw">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              mollis dolor.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="right animate__animated animate__slideInRight">
+        <button class="button" onclick="readm(4)">
+          <svg
+            width="20"
+            height="10"
+            viewBox="0 0 20 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M11.0102 9.63388C10.4523 10.122 9.54774 10.122 8.98985 9.63388L0.418419 2.13388C-0.139474 1.64573 -0.139474 0.854272 0.418419 0.366117C0.97631 -0.122039 1.88083 -0.122039 2.43872 0.366117L10 6.98223L17.5613 0.366117C18.1192 -0.122039 19.0237 -0.122039 19.5816 0.366117C20.1395 0.854272 20.1395 1.64573 19.5816 2.13388L11.0102 9.63388Z"
+              fill="#20997B"
+            />
+          </svg>
+        </button>
+        <div class="titleTest">
+          <p>Test de prediabetes</p>
+        </div>
+        <div class="resandate">
+          <div class="date">
+            <img src="assets/63-calendar.svg" class="calendar" alt="" />
+            <p id="date_p">Aún sin realizar</p>
+          </div>
+          <br />
+          <div class="estado hide">
+            <img src="assets/88-tick-circle.svg" class="imgres" alt="" />
+            <p class="resultado">pendiente</p>
+          </div>
+        </div>
+        <div class="hiden">
+          <div class="valoracion hide">
+            <p>Valoración</p>
+          </div>
+          <div class="largeText hide">
+            <img src="assets/comentario1.svg" alt="" />
+            <p id="comentario">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              mollis dolor.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="left animate__animated animate__slideInLeft"
+        style="margin-bottom: 3vh"
+      >
+        <button class="buttonl" onclick="read(4)">
+          <svg
+            width="20"
+            height="10"
+            viewBox="0 0 20 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M11.0102 9.63388C10.4523 10.122 9.54774 10.122 8.98985 9.63388L0.418419 2.13388C-0.139474 1.64573 -0.139474 0.854272 0.418419 0.366117C0.97631 -0.122039 1.88083 -0.122039 2.43872 0.366117L10 6.98223L17.5613 0.366117C18.1192 -0.122039 19.0237 -0.122039 19.5816 0.366117C20.1395 0.854272 20.1395 1.64573 19.5816 2.13388L11.0102 9.63388Z"
+              fill="#20997B"
+            />
+          </svg>
+        </button>
+        <div class="titleTestl">
+          <p>Test de Insomnio</p>
+        </div>
+        <div class="resandatel">
+          <div class="datel">
+            <img src="assets/63-calendar.svg" class="calendar" alt="" />
+            <p id="date_p">Aún sin realizar</p>
+          </div>
+          <br />
+          <div class="estadol hide">
+            <img src="assets/88-tick-circle.svg" class="imgres" alt="" />
+            <p class="resultado">pendiente</p>
+          </div>
+        </div>
+        <div class="hiden1">
+          <div class="valoracionl hide">
+            <p>Valoración</p>
+          </div>
+          <div class="largeTextl hide" style="margin-left: 5vw">
+            <img src="assets/comentario1.svg" alt="" />
+            <p id="comentario" style="margin-right: 8vw; margin-left: 9vw">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              mollis dolor.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="js/resultados.js"></script>
+</html>
