@@ -21,5 +21,5 @@ function on(){
 }
 function out(){
     imagen.src='assets/chevron-down3.svg';
-    imagen.addEventListener("click",out);
+    imagen.addEventListener("click",on);
 }

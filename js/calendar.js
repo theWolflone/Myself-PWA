@@ -9,25 +9,16 @@ let myselfCalendar = new Calendar({
       dateChanged: (currentDate, events) => {
             const events_display = document.querySelector('.events-display');
             let events_html = '';
-            console.log(currentDate, events);
+            // console.log(currentDate, events);
             events.forEach(event => {
               events_html += `
                 <div class="event">
                   <div class="event-left">
                     <div class="event-title">${event.name}</div>
-                    <a href="${event.url}" target="_blank" class="event-url">${event.url}</a>
-                    <div class="event-topics">${
-                      event.topics.map(topic => {
-                        return `
-                          <span class="event-topic">${topic}</span>
-                        `;
-                      }).join('')
-                    }</div>
-                  </div>
-                  <div class="event-right ${event.free ? 'event-free' : 'event-paid'}">
-                    <div class="${event.free ? 'event-free-text' : 'event-paid-text'}">${
-                      event.free ? 'FREE' : 'PAID'
-                    }</div>
+                    <div class="event-topics">
+                    <br>
+                        <span class="event-topic">${event.subtitle}</span>
+                    </div>
                   </div>
                 </div>
               `
@@ -35,38 +26,23 @@ let myselfCalendar = new Calendar({
             if(events_html) {
               events_display.innerHTML = events_html;
             } else {
-              events_display.innerHTML = '<div class="no-events-text">No tienes ninguna actividad o recordatorio :(</div>';
+              events_display.innerHTML = '<div class="no-events-text">No tienes ninguna actividad o recordatorio</div>';
             }
       }     
 });
 
-(() => {
+(async () => {
+
+    let fetchedCalendar = await getCalendar();
+
+    console.log(fetchedCalendar)
+
       events = [
             {
-                "topics": [
-                    "architecture",
-                    "fullstack"
-                ],
-                "continentCode": "ON",
-                "endDate": "2022-12-09T00:00:00.000Z",
-                "twitter": "devternity",
-                "startDate": "2022-12-08T00:00:00.000Z",
-                "creator": "sFdb6nAkYjflAezbyZFsqqIkMm02",
-                "url": "https://devternity.com",
-                "countryCode": "ON",
-                "best": true,
                 "subtitle": "Turning developers into architects and engineering leaders",
-                "category": "conference",
-                "free": false,
-                "creationDate": "2022-03-01T10:39:02.969Z",
                 "name": "DevTernity - the top developer conference",
-                "city": "Online",
-                "favicon": "https://dev.events/logos/devternity.png",
-                "featured": true,
-                "country": "Online",
-                "id": "dev-ternity-the-main-developer-conference-online-11-2022",
                 "start": "2022-12-08T00:00:00.000Z",
-                "end": "2022-12-09T00:00:00.000Z"
+                "end": "2022-12-08T00:00:00.000Z"
             },
             {
                 "favicon": "https://dev.events/logos/principal.png",
@@ -267,15 +243,15 @@ let myselfCalendar = new Calendar({
             },
             {
                 "endDate": "2022-10-28T00:00:00.000Z",
-                "free": false,
+                "free": true,
                 "creationDate": "2022-05-04T11:33:59.221Z",
-                "name": "Principal Developer (USA Time Zone)",
+                "name": "Salir a correr",
                 "topics": [
-                    "leadership"
+                    "Ir hasta el parque de Aserrí y pasar comprando frutas."
                 ],
                 "creator": "sFdb6nAkYjflAezbyZFsqqIkMm02",
                 "startDate": "2022-10-27T00:00:00.000Z",
-                "url": "https://principal.dev",
+                "url": " ",
                 "twitter": "eduardsi",
                 "continentCode": "ON",
                 "category": "masterclass",
@@ -695,7 +671,41 @@ let myselfCalendar = new Calendar({
             }
         ]
 
-        myselfCalendar.setEventsData(events);
+        personaEvents = [
+            {
+                "_id": "635f5d94ec2a581684896882",
+                "Nombre": "Salir a correr",
+                "Descripcion": "",
+                "Fecha": "2022-10-31T00:00:00.000Z",
+                "_idPersona": "6354948400df908f8a34fd77",
+                "__v": 0
+            },
+            {
+                "_id": "635f5d9eec2a581684896884",
+                "Nombre": "Salir a caminar",
+                "Descripcion": "",
+                "Fecha": "2022-10-31T00:00:00.000Z",
+                "_idPersona": "6354948400df908f8a34fd77",
+                "__v": 0
+            },
+            {
+                "_id": "63608ac85c6c40fbf88d98c0",
+                "Descripcion": "Me he sentido mejor de mi oído y ya no tengo dolor en mis ojos.",
+                "Fecha": "2022-11-01T02:55:47.000Z",
+                "_idPersona": "6354948400df908f8a34fd77",
+                "__v": 0
+            },
+            {
+                "_id": "63608ae65c6c40fbf88d98c2",
+                "Nombre": "Salir a caminar",
+                "Descripcion": "Pasar por un desayuno",
+                "Fecha": "2022-11-02T00:00:00.000Z",
+                "_idPersona": "6354948400df908f8a34fd77",
+                "__v": 0
+            }
+        ]
+
+        myselfCalendar.setEventsData(fetchedCalendar);
         if(Object.keys(myselfCalendar.eventDayMap).length === 0) {
           myselfCalendar.updateCurrentDate(1);
         }

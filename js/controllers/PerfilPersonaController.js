@@ -1,20 +1,17 @@
 'use strict';
 
-let personaConsultada = GetPersonaConsultada();
-desplegarDatosConsultados();
-let queryString = window.location.search;
-let urlParams = new URLSearchParams(queryString);
-let acc = urlParams.get('acc'); //Q = query
-if (acc == null) {
-  acc = 'D'; //Desplegar  (no se llama desde el CRUD)
-}
+let personaConsultada = personaLoggeada;
 
-function desplegarDatosConsultados() {
+desplegarDatosConsultadosOutputs();
+
+function desplegarDatosConsultadosOutputs() {
   if (personaConsultada != null) {
-    document.getElementById('PersonaFoto').src = personaConsultada.FotoPerfil;
-    document.getElementById('outCedula').value = personaConsultada.Cedula;
+    // document.getElementById('PersonaFoto').src = personaConsultada.FotoPerfil;
     document.getElementById('outNombre').value = personaConsultada.Nombre;
-    document.getElementById('outEmail').value = personaConsultada.Correo;
-    document.getElementById('outTelefono').value = personaConsultada.Telefono;
+    document.getElementById('outApellidos').value = personaConsultada.Apellidos;
+    document.getElementById('outSeccion').value = personaConsultada.Seccion;
+    document.getElementById('outCarnet').value = personaConsultada.Carnet;
+    document.getElementById('outMail').value = personaConsultada.Mail;
+
   }
 }

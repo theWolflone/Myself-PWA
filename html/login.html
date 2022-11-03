@@ -27,25 +27,26 @@
                   <h2 class="form-title" id="signup">Registrarse</h2>
                   <div class="form-holder">
                         <form action="">
-                              <input type="text" class="input" placeholder="Nombre" required/>
-                              <input type="text" class="input" placeholder="Apellidos" required/>
+                              <input type="text" id="txtNombre" class="input" placeholder="Nombre" required/>
+                              <input type="text" id="txtApellidos" class="input" placeholder="Apellidos" required/>
                               <h2 class="h2" style="margin-left: 15px";>Sexo</h2>
-                              <div class="center-label">
-                                    <input class="input1 radio" type="radio" name="gender" value="masculino" required>
-                                    <span class="label">Masculino </span>
-                  
-                                    <input class="input1 radio" type="radio" name="gender" value="femenino" required>
-                                    <span class="label">Femenino</span>
+                              <div class="select">
+                                    <select name="sexo" id="txtSexo" class="se-select" required>
+                                          <option value="" default>Ingrese su sexo</option>
+                                          <option value="M" class="sexo">Masculino</option>
+                                          <option value="F" class="sexo">Femenino</option>
+                                          <option value="O" class="sexo">Prefiero no decirlo</option>
+                                    </select>
                               </div>
                               <hr style="border: 1px solid #eee;
                               ">
-                              <input type="number" class="input" placeholder="Edad" required min="12" max="19"/>
-                              <input type="text" class="input" placeholder="Sección" required maxlength="4"/>
-                              <input type="text" class="input" placeholder="Carné" />
-                              <input type="email" class="input" placeholder="Correo Institucional" />
-                              <input type="password" class="input" placeholder="Contraseña" />
+                              <input type="number" id="txtEdad" class="input" placeholder="Edad" required min="12" max="100" maxlength="3"/>
+                              <input id="txtCarnet" type="text" class="input" placeholder="Carné" required maxlength="7"/>
+                              <input id="txtSeccion" type="text" class="input" placeholder="Sección" required maxlength="4"/>
+                              <input id="txtMail" type="email" class="input" placeholder="Correo" required/>
+                              <input id="txtPassword" type="password" class="input" placeholder="Contraseña" required/>
                         </div>
-                        <button class="submit-btn">Comenzar</button>
+                        <button id="btnRegistrar" type="button" class="submit-btn">Comenzar</button>
                   </form>
             </div>
             <div class="login slide-up">
@@ -53,18 +54,24 @@
                         <h2 class="form-title" id="login"><span>o</span>Iniciar Sesión</h2>
                         <div class="form-holder">
                               <form action="">
-                                    <input type="email" class="input" placeholder="Correo Institucional" />
-                                    <input type="password" class="input" placeholder="Contraseña" />
+                                    <input type="email" id="txtCorreo" class="input" placeholder="Correo" />
+                                    <input type="password" id="txtContra" class="input" placeholder="Contraseña" />
                               </form>
                         </div>
-                        <button class="submit-btn">Iniciar sesión</button>
+                        <button class="submit-btn" type="button" id="btnIngresar">Iniciar sesión</button>
                   </div>
             </div>
       </div>
 
 </body>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../js/controllers/ControllerGeneral.js"></script>
+<script src="../js/Constantes.js"></script>
+<script src="../js/services/CRUPersonasService.js"></script>
 <script src="../js/services/PersonaService.js"></script>
-<script src="../js/services/CrudPersonasService.js"></script>
+<script src="../js/services/LoginService.js"></script>
+<script src="../js/controllers/CreacionCuentaController.js"></script>
+<script src="../js/controllers/LoginController.js"></script>
 <script src="../js/loginstyle.js"></script>
 </html>

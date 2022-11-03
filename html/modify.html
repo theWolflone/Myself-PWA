@@ -39,24 +39,33 @@
             <div class="formContainer">
                         <form action="" class="form">
                               <p>
-                                    <input type="text" placeholder="Nombre" required class="animate__animated animate__slideInLeft">
+                                    <input id="inputNombre" type="text" placeholder="Nombre" required class="animate__animated animate__slideInLeft">
                               </p>
                               
                               <p>
-                                    <input type="text" placeholder="Apellidos" required class="animate__animated animate__slideInRight">
+                                    <input id="inputApellidos" type="text" placeholder="Apellidos" required class="animate__animated animate__slideInRight">
                               </p>
                               
                               <p>
-                                    <input type="email" placeholder="Correo" required class="animate__animated animate__slideInLeft">
+                                    <input id="inputMail" type="email" placeholder="Correo" required class="animate__animated animate__slideInLeft">
                               </p>
                               
                               <p>
-                                    <input type="password" placeholder="Contraseña" required class="animate__animated animate__slideInRight">
+                                    <input id="inputPassword" type="password" placeholder="Contraseña" required class="animate__animated animate__slideInRight">
                               </p>
 
-                              <button type="button" id="sendButton" class="animate__animated animate__slideInUp">Guardar</button>
+                              <button type="button" id="btnModificar" onclick="ValidacionesModificar();" class="animate__animated animate__slideInUp">Guardar</button>
 
                         </form>
 
             </div>
 </body>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="../js/controllers/ControllerGeneral.js"></script>
+      <script src="../js/Constantes.js"></script>
+      <script src="../js/services/CRUPersonasService.js"></script>
+      <script src="../js/services/PersonaService.js"></script>
+      <script src="../js/controllers/CreacionCuentaController.js"></script>
+
+</html>
