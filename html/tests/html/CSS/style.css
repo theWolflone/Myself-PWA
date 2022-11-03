@@ -1,3 +1,7 @@
+@import url(../../../../styles/index-dist.css);
+
+
+
 *{
     margin: 0;
 }
@@ -29,7 +33,7 @@ html{
     margin-bottom: 3vh;
     background: var(--darkgreen);
 }
-.title p{
+.title output{
     position: absolute;
     width: 63.84vw;
     height: 6.04vh;
