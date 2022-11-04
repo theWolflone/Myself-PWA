@@ -10,7 +10,7 @@ function show(){
             msj=Number(msj)+Number(num);
         }
     }
-    if(msj>17 && msj<=33){
+    if(msj>=16 && msj<=33){
       resultadoTest1 = "BAJO";
 
         Swal.fire({
@@ -18,7 +18,7 @@ function show(){
             title: '<output style="color: #20997B; font-family: Quicksand;" id="testResult1">BAJO</output>',
             background: "#F0FFE2",
             html:
-              '<output id="recomendacion1" style="display: block;">Es importante que introduzcas cambios para conseguir unos niveles de salud adecuados. Existen varias áreas que deberías revisar con el fin de incrementar los niveles de salud que alcanzas actualmente.</output>' + '<br>'+ '<button onclick="AlmacenarTestResult1(resultadoTest1)" type="button" class="swal-confirm swal-styled swal2-default-outline" aria-label style="display: absolute; background-color: rgb(32, 153, 123);">Ok</button>'+'<br>',
+              '<output id="recomendacion1" style="display: block;">Es importante que introduzcas cambios para conseguir unos niveles de salud adecuados. Existen varias áreas que deberías revisar con el fin de incrementar los niveles de salud que alcanzas actualmente.</output>' + '<br>'+ '<button onclick="AlmacenarTestResult1(resultadoTest1)" type="button" class="swal-confirm swal-styled swal2-default-outline" aria-label style="display: absolute; background-color: rgb(32, 153, 123);">Guardar</button>'+'<br>',
             focusConfirm: false,
             showConfirmButton: false,
             showCloseButton: true,
@@ -33,7 +33,7 @@ function show(){
             title: '<output style="color: #20997B; font-family: "Quicksand";" id="testResult2">MEDIO</output>',
             background: "#F0FFE2",
             html:
-              '<output id="recomendacion2" style="display: block;">Tienes algunos hábitos saludables en tu estilo de vida pero te convendría realizar algunos ajustes con el objetivo de mejorar aun más tu salud e incrementar tus resultados.</output>'+ '<br>'+ '<button onclick="AlmacenarTestResult2(resultadoTest2)" type="button" class="swal-confirm swal-styled swal2-default-outline" aria-label style="display: absolute; background-color: rgb(32, 153, 123);">Ok</button>'+'<br>',
+              '<output id="recomendacion2" style="display: block;">Tienes algunos hábitos saludables en tu estilo de vida pero te convendría realizar algunos ajustes con el objetivo de mejorar aun más tu salud e incrementar tus resultados.</output>'+ '<br>'+ '<button onclick="AlmacenarTestResult2(resultadoTest2)" type="button" class="swal-confirm swal-styled swal2-default-outline" aria-label style="display: absolute; background-color: rgb(32, 153, 123);">Guardar</button>'+'<br>',
             focusConfirm: false,
             showConfirmButton: false,
             showCloseButton: true,
@@ -43,13 +43,13 @@ function show(){
         // res2='<div class="swal2-html-container" id="recomendacion" style="display: block;">Tienes algunos hábitos saludables en tu estilo de vida pero te convendría realizar algunos ajustes con el objetivo de mejorar aun más tu salud e incrementar tus resultados.</div>';
         // res3="success";
     }
-    else{
+    else if(msj>=54 && msj<=80){
       resultadoTest3 = "¡BUENO!";
         Swal.fire({
             title: '<output style="color: #20997B; font-family: "Quicksand";" id="testResult3">¡BUENO!</output>',
             background: "#F0FFE2",
             html:
-              '<output id="recomendacion3" style="display: block;">Eres una persona que se cuida y que posee un estilo de vida saludable. ¡Sigue así!</output>'+ '<br>'+ '<button onclick="AlmacenarTestResult3(resultadoTest3)" type="button" class="swal-confirm swal-styled swal2-default-outline" aria-label style="display: absolute; background-color: rgb(32, 153, 123);">Ok</button>'+'<br>',
+              '<output id="recomendacion3" style="display: block;">Eres una persona que se cuida y que posee un estilo de vida saludable. ¡Sigue así!</output>'+ '<br>'+ '<button onclick="AlmacenarTestResult3(resultadoTest3)" type="button" class="swal-confirm swal-styled swal2-default-outline" aria-label style="display: absolute; background-color: rgb(32, 153, 123);">Guardar</button>'+'<br>',
             focusConfirm: false,
             showConfirmButton: false,
             showCloseButton: false,
