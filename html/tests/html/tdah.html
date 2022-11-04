@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styledep.css">
+    <link rel="stylesheet" href="CSS/styledep.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Document</title>
 </head>
@@ -15,7 +15,7 @@
             <path fill-rule="evenodd" clip-rule="evenodd" d="M21.1945 0.690391C22.2685 1.61091 22.2685 3.10337 21.1945 4.02389L6.63909 16.5L21.1945 28.9761C22.2685 29.8966 22.2685 31.3891 21.1945 32.3096C20.1206 33.2301 18.3794 33.2301 17.3055 32.3096L0.805456 18.1667C-0.268485 17.2462 -0.268485 15.7538 0.805456 14.8332L17.3055 0.690391C18.3794 -0.23013 20.1206 -0.23013 21.1945 0.690391Z" fill="#f0ffe2"/>
             </svg></a>
         <div class="title animate__animated animate__slideInRight">
-            <p>Test de TDAH</p>
+            <output id="nameTest">Test de TDAH</output>
         </div>
         <div class="question1">
             <!--Numero-->
@@ -122,6 +122,23 @@
         </div>
     </div>
 </body>
-<script src="js/logic_TDAH.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../../../js/services/LoginService.js"></script>
+<script src="../../../js/Constantes.js"></script>
+<script src="../../../js/controllers/ControllerGeneral.js"></script>
+<script src="../../../js/services/PersonaService.js"></script>
+<script src="../../../js/services/CRUPersonasService.js"></script>
+<script src="../../../js/services/eventsService.js"></script>
+<script src="../../../js/services/medicationService.js"></script>
+<script src="../../../js/services/reactionService.js"></script>
+<script src="../../../js/services/testResultService.js"></script>
+<script src="../../../js/controllers/reactionController.js"></script>
+<script src="../../../js/controllers/calendarController.js"></script>
+<script src="../../../js/controllers/eventsController.js"></script>
+<script src="../../../js/controllers/medicationController.js"></script>
+<script src="../../../js/controllers/PerfilPersonaController.js"></script>
+<script src="../../../js/controllers/testResultController.js"></script>
+<script src="JS/logic_TDAH.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.37/dist/sweetalert2.all.min.js"></script>
 </html>
