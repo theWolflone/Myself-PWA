@@ -9,7 +9,7 @@ async function GuardarTestResultado(
   let result = {};
   await axios({
     method: "post",
-    url: apiUrl + "/MostrarResultado",
+    url: apiUrl + "/MostrarTestResultado",
     responseType: "json",
     data: {
       nameTest: pNameTest,

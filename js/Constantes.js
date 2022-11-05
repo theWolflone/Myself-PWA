@@ -101,6 +101,20 @@ function padTo2Digits(num) {
   return num.toString().padStart(2, "0");
 }
 
+function GetTestsResults() {
+  let datosTests=null;
+  let testStorage = localStorage.getItem("datosTests");
+  if (
+    testStorage != null &&
+    testStorage != undefined &&
+    testStorage != ""
+  ) {
+    datosTests = JSON.parse(testStorage);
+  }
+  console.log(datosTests);
+  return datosTests;
+}
+
 function GetSesionActiva() {
   let datosSesionActiva = null;
   let localStorageData = localStorage.getItem("datosSesionActiva");
