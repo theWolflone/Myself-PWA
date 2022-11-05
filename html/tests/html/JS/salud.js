@@ -19,7 +19,7 @@ function show() {
       html:
         '<output id="recomendacionTestSalud1" style="display: block;">No presenta síntomas de una mala salud mental, por favor bajo cualquier sospecha acuda con un especialista.</output>' +
         "<br>" +
-        '<button onclick="AlmacenarTestSaludResult1(testSaludResult1)" type="button" class="swal-confirm swal-styled swal2-default-outline" aria-label style="display: absolute; background-color: rgb(32, 153, 123);">Ok</button>' +
+        '<button onclick="AlmacenarTestSaludResult1(testSaludResult1)" type="button" class="swal-confirm swal-styled swal2-default-outline" aria-label style="display: absolute; background-color: rgb(32, 153, 123);">Guardar</button>' +
         "<br>",
       focusConfirm: false,
       showConfirmButton: false,
@@ -39,13 +39,13 @@ function show() {
       html:
         '<output id="recomendacionTestSalud2" style="display: block;">Al parecer presentas una leve afectacción en tu salud mental y bajo cualquier sospecha acuda con un especialista.</output>' +
         "<br>" +
-        '<button onclick="AlmacenarTestSaludResult2(testSaludResult2)" type="button" class="swal-confirm swal-styled swal2-default-outline" aria-label style="display: absolute; background-color: rgb(32, 153, 123);">Ok</button>' +
+        '<button onclick="AlmacenarTestSaludResult2(testSaludResult2)" type="button" class="swal-confirm swal-styled swal2-default-outline" aria-label style="display: absolute; background-color: rgb(32, 153, 123);">Guardar</button>' +
         "<br>",
       focusConfirm: false,
       showConfirmButton: false,
       showCloseButton: true,
       icon: "warning",
-    })
+    });
     // resu = "<h2 class='swal2-title' id='title'>Riesgo bajo</h2>";
     // res2 =
     //   '<div class="swal2-html-container" id="recomendacion" style="display: block;">Al parecer presentas una leve afectacción en tu salud mental y bajo cualquier sospecha acuda con un especialista.</div>';
@@ -60,18 +60,17 @@ function show() {
       html:
         '<output id="recomendacionTestSalud3" style="display: block;">Los resultados indican que podrías estar presentando algunos síntomas malestar emocional, en relación con tu salud mental.</output>' +
         "<br>" +
-        '<button onclick="AlmacenarTestSaludResult3(testSaludResult3)" type="button" class="swal-confirm swal-styled swal2-default-outline" aria-label style="display: absolute; background-color: rgb(32, 153, 123);">Ok</button>' +
+        '<button onclick="AlmacenarTestSaludResult3(testSaludResult3)" type="button" class="swal-confirm swal-styled swal2-default-outline" aria-label style="display: absolute; background-color: rgb(32, 153, 123);">Guardar</button>' +
         "<br>",
       focusConfirm: false,
       showConfirmButton: false,
       showCloseButton: true,
       icon: "warning",
-    })
+    });
     // resu = "<h2 class='swal2-title' id='title'>Riesgo moderado</h2>";
     // res2 =
     //   '<div class="swal2-html-container" id="recomendacion" style="display: block;">Los resultados indican que podrías estar presentando algunos síntomas malestar emocional, en relación con tu salud mental.</div>';
     // res3 = "success";
-
   } else if (msj >= 0 && msj <= 14) {
     testSaludResult4 = "Riesgo alto";
 
@@ -82,13 +81,13 @@ function show() {
       html:
         '<output id="recomendacionTestSalud4" style="display: block;">Los resultados indican que podrías estar presentando un malestar emocional grave, en relación a tu salud mental.</output>' +
         "<br>" +
-        '<button onclick="AlmacenarTestSaludResult4(testSaludResult4)" type="button" class="swal-confirm swal-styled swal2-default-outline" aria-label style="display: absolute; background-color: rgb(32, 153, 123);">Ok</button>' +
+        '<button onclick="AlmacenarTestSaludResult4(testSaludResult4)" type="button" class="swal-confirm swal-styled swal2-default-outline" aria-label style="display: absolute; background-color: rgb(32, 153, 123);">Guardar</button>' +
         "<br>",
       focusConfirm: false,
       showConfirmButton: false,
       showCloseButton: true,
       icon: "error",
-    })
+    });
     // resu = "<h2 class='swal2-title' id='title'>Riesgo alto</h2>";
     // res2 =
     //   '<div class="swal2-html-container" id="recomendacion" style="display: block;">Los resultados indican que podrías estar presentando un malestar emocional grave, en relación a tu salud mental.</div>';
